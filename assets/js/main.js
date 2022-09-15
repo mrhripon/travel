@@ -5,7 +5,7 @@ const page_sku = 'sku.html';
 const page_confirmation = 'confirmation.html';
 
 // Site Data URL 
-const APP_URL = './assets/js/data.json';
+const APP_URL = './data.json';
 
 // Global Variable 
 let homePackages, allPackages, departurePlace, departurePlaceValue, data;
