@@ -1,0 +1,354 @@
+[
+    {
+        "discount": "30",
+        "products": [
+            {
+                "id": "d_15-1",
+                "discount": "30",
+                "package_thumb": "assets/img/place-1.png",
+                "place_name": "Jericoacara",
+                "price": "200",
+                "departure_id": "place_1",
+                "sku": {
+                    "skuImg": [
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png"
+                    ],
+                    "skuData": ""
+                }
+            },
+            {
+                "id": "d_15-2",
+                "package_thumb": "assets/img/place-2.png",
+                "place_name": "Rio de Janeiro",
+                "price": "200",
+                "departure_id": "place_1",
+                "sku": {
+                    "skuImg": [
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png"
+                    ],
+                    "skuData": ""
+                }
+            },
+            {
+                "id": 3,
+                "package_thumb": "assets/img/place-3.png",
+                "place_name": "São Paulo",
+                "price": "200",
+                "departure_id": "place_1",
+                "sku": {
+                    "skuImg": [
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png"
+                    ],
+                    "skuData": ""
+                }
+            },
+            {
+                "id": 4,
+                "package_thumb": "assets/img/place-4.png",
+                "place_name": "Fortaleza",
+                "price": "200",
+                "departure_id": "place_1",
+                "sku": {
+                    "skuImg": [
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png"
+                    ],
+                    "skuData": ""
+                }
+            },
+            {
+                "id": 5,
+                "package_thumb": "assets/img/place-5.png",
+                "place_name": "Barcelona",
+                "price": "200",
+                "departure_id": "place_2",
+                "sku": {
+                    "skuImg": [
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png"
+                    ],
+                    "skuData": ""
+                }
+            },
+            {
+                "id": 6,
+                "package_thumb": "assets/img/place-6.png",
+                "place_name": "Gramado",
+                "price": "200",
+                "departure_id": "place_2",
+                "sku": {
+                    "skuImg": [
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png"
+                    ],
+                    "skuData": ""
+                }
+            },
+            {
+                "id": 7,
+                "package_thumb": "assets/img/place-7.png",
+                "place_name": "Porto Alegre",
+                "price": "200",
+                "departure_id": "place_2",
+                "sku": {
+                    "skuImg": [
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png"
+                    ],
+                    "skuData": ""
+                }
+            },
+            {
+                "id": 8,
+                "package_thumb": "assets/img/place-8.png",
+                "place_name": "Porto de Galinhas",
+                "price": "200",
+                "departure_id": "place_2",
+                "sku": {
+                    "skuImg": [
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png"
+                    ],
+                    "skuData": ""
+                }
+            },
+            {
+                "id": 9,
+                "package_thumb": "assets/img/place-9.png",
+                "place_name": "Bogotá",
+                "price": "200",
+                "departure_id": "place_3",
+                "sku": {
+                    "skuImg": [
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png"
+                    ],
+                    "skuData": ""
+                }
+            },
+            {
+                "id": 10,
+                "package_thumb": "assets/img/place-10.png",
+                "place_name": "Roma",
+                "price": "200",
+                "departure_id": "place_3",
+                "sku": {
+                    "skuImg": [
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png"
+                    ],
+                    "skuData": ""
+                }
+            },
+            {
+                "id": 11,
+                "package_thumb": "assets/img/place-11.png",
+                "place_name": "Recife",
+                "price": "200",
+                "departure_id": "place_3",
+                "sku": {
+                    "skuImg": [
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png"
+                    ],
+                    "skuData": ""
+                }
+            },
+            {
+                "id": 12,
+                "package_thumb": "assets/img/place-12.png",
+                "place_name": "Morro de São Paulo/Bahia",
+                "price": "200",
+                "departure_id": "place_3",
+                "sku": {
+                    "skuImg": [
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png"
+                    ],
+                    "skuData": ""
+                }
+            }
+        ]
+    },
+    {
+        "discount": "15",
+        "products": [
+            {
+                "id": "d_15-1",
+                "discount": "30",
+                "package_thumb": "assets/img/place-13.png",
+                "place_name": "Buenos Aires",
+                "price": "200",
+                "departure_id": "place_3",
+                "sku": {
+                    "skuImg": [
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png"
+                    ],
+                    "skuData": ""
+                }
+            },
+            {
+                "id": 2,
+                "package_thumb": "assets/img/place-14.png",
+                "place_name": "Salvador",
+                "price": "200",
+                "departure_id": "place_1",
+                "sku": {
+                    "skuImg": [
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png"
+                    ],
+                    "skuData": ""
+                }
+            },
+            {
+                "id": 3,
+                "package_thumb": "assets/img/place-15.png",
+                "place_name": "Madrid",
+                "price": "200",
+                "departure_id": "place_1",
+                "sku": {
+                    "skuImg": [
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png"
+                    ],
+                    "skuData": ""
+                }
+            },
+            {
+                "id": 4,
+                "package_thumb": "assets/img/place-16.png",
+                "place_name": "Nova Iorque",
+                "price": "200",
+                "departure_id": "place_1",
+                "sku": {
+                    "skuImg": [
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png"
+                    ],
+                    "skuData": ""
+                }
+            },
+            {
+                "id": 5,
+                "package_thumb": "assets/img/place-17.png",
+                "place_name": "Maceió",
+                "price": "200",
+                "departure_id": "place_1",
+                "sku": {
+                    "skuImg": [
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png"
+                    ],
+                    "skuData": ""
+                }
+            },
+            {
+                "id": 6,
+                "package_thumb": "assets/img/place-18.png",
+                "place_name": "Paris",
+                "price": "200",
+                "departure_id": "place_1",
+                "sku": {
+                    "skuImg": [
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png"
+                    ],
+                    "skuData": ""
+                }
+            },
+            {
+                "id": 7,
+                "package_thumb": "assets/img/place-19.png",
+                "place_name": "Maragogi",
+                "price": "200",
+                "departure_id": "place_1",
+                "sku": {
+                    "skuImg": [
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png"
+                    ],
+                    "skuData": ""
+                }
+            },
+            {
+                "id": 8,
+                "package_thumb": "assets/img/place-20.png",
+                "place_name": "Lisboa",
+                "price": "200",
+                "departure_id": "place_1",
+                "sku": {
+                    "skuImg": [
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png",
+                        "assets/img/place-1.png"
+                    ],
+                    "skuData": ""
+                }
+            }
+        ]
+    }
+]

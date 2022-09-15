@@ -1,0 +1,423 @@
+/* Base Css Start  */
+/* Custom Fonts Linking  */
+@font-face {
+  font-family: proximaNovaRegular;
+  src: url(../fonts/FontsFree-Net-proxima_nova_reg-webfont.ttf);
+}
+
+@font-face {
+  font-family: proximaNovaSemiBold;
+  src: url(../fonts/FontsFree-Net-Proxima-Nova-Sbold.otf);
+}
+
+body {
+  font-family: proximaNovaRegular;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #F5F5F5;
+}
+
+.fix {
+  overflow: hidden;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 0px;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0px;
+  color: #333333;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+a {
+  font-size: 16px;
+}
+
+a:focus,
+input:focus,
+textarea:focus,
+button:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+a:focus,
+a:hover {
+  text-decoration: none;
+}
+
+span,
+a {
+  display: inline-block;
+}
+
+ul,
+ol {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+/* Base Css End */
+
+
+/* common css start  */
+.border_radius_4 {
+  border-radius: 4px;
+}
+
+.primary-title {
+  font-family: proximaNovaSemiBold;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.secondary-title {
+  font-family: proximaNovaSemiBold;
+  font-weight: 600;
+  margin-bottom: 6px;
+  line-height: 1.1;
+}
+
+.btn.box-btn {
+  background-color: #3483FA;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1;
+  padding: 12px 20px;
+  min-width: 130px;
+  text-align: center;
+}
+
+/* common css end */
+
+/* page loader css start  */
+
+.loader3 {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  padding: 0px;
+  text-align: left;
+}
+
+.loader3 span {
+  position: absolute;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background: #d3cfc3;
+  -webkit-animation: loader3 1.5s linear infinite;
+  animation: loader3 1.5s linear infinite;
+}
+
+.loader3 span:last-child {
+  animation-delay: -0.9s;
+  -webkit-animation-delay: -0.9s;
+}
+
+@keyframes loader3 {
+  0% {
+    transform: scale(0, 0);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes loader3 {
+  0% {
+    -webkit-transform: scale(0, 0);
+    opacity: 0.8;
+  }
+
+  100% {
+    -webkit-transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+
+#preloader {
+  position: fixed;
+  background: #fff;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99999;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* page loader css end */
+
+/* --- header css start */
+.header-area {
+  background-color: #FFE600;
+  padding: 20px 0;
+}
+
+.header-search .form-control {
+  border-radius: 8px;
+  height: 36px;
+}
+
+/* --- header css end */
+
+/* --- hero-area css start */
+
+.splide__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  background-color: #fff;
+  width: 64px;
+  height: 64px;
+  border: 0;
+  border-radius: 50%;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.splide__arrow:hover {
+  background-color: #F5F5F5;
+}
+
+.splide__arrow--prev {
+  left: -32px;
+}
+
+.splide__arrow--next {
+  right: -32px;
+}
+
+.splide__pagination li button {
+  background: rgba(51, 51, 51, 0.25);
+  border: 1px solid #FFFFFF;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+.splide__pagination li button.is-active {
+  background-color: #fff;
+}
+
+.splide__pagination li {
+  line-height: 1;
+}
+
+.splide__pagination {
+  width: 100%;
+  position: absolute;
+  bottom: 30px;
+  z-index: 1;
+}
+
+/* --- hero-area css end */
+
+/* --- travel-place area css start */
+
+.travel-place-area {
+  padding-top: 60px;
+}
+
+.section-title {
+  margin-bottom: 30px;
+}
+
+/* --- travel-place area css end */
+
+/* --- package-area css start */
+.package-area {
+  padding: 60px 0;
+}
+
+.filter-wrapper {
+  background-color: #FFFFFF;
+  padding: 45px 15px;
+  margin-bottom: 48px;
+  margin-top: 20px;
+}
+
+.filter-type {
+  border: 1px solid #999999;
+  height: 60px;
+}
+
+.package-card {
+  text-decoration: none;
+  background: #FFFFFF;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.package-content {
+  padding: 16px;
+}
+
+.facilites li {
+  color: #333333;
+  font-size: 13px;
+  display: block;
+}
+
+.facilites li img {
+  margin-right: 8px;
+  width: 17px;
+  height: 17px;
+}
+
+.facilites li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.from {
+  font-size: 11px;
+  margin-bottom: 4px;
+}
+
+.package-thumb {
+  height: 180.317px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-green {
+  background-color: #0DB464;
+}
+
+.badge {
+  top: 10px;
+  left: 10px;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 11px;
+  font-family: proximaNovaRegular;
+  font-weight: 400;
+}
+
+.filter-type.partida p,
+.filter-type.diar p,
+.filter-type.pac p {
+  top: 50%;
+  transform: translateY(-50%);
+  left: 24px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.filter-type .nice-select {
+  font-family: proximaNovaSemiBold;
+  padding-left: 148px;
+  padding-right: 24px;
+}
+
+.nice-select-dropdown {
+  width: 100%;
+}
+
+.filter-type.diar .nice-select {
+  padding-left: 165px;
+}
+
+/* --- package-area css end */
+
+
+/* --- showcase-area css start */
+.tertiary-title {
+  margin-bottom: 12px;
+}
+
+.showcase-area .para {
+  padding: 40px 0px;
+  margin-bottom: 44px;
+}
+
+/* --- showcase-area css end */
+
+/* --- footer css start */
+.showcase-img img {
+  border-radius: 4px;
+}
+
+
+.footer-area {
+  padding: 24px 0;
+}
+
+.ft-menu li a {
+  color: #333333;
+  font-size: 15px;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.ft-menu li:not(:last-child) {
+  margin-right: 40px;
+}
+
+.ft-text p {
+  color: #666666;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.ft-menu {
+  margin-bottom: 8px;
+}
+
+.sq {
+  width: 192px;
+  height: 24px;
+  border-radius: 5px 5px 0 0;
+  transform: translateX(-50%);
+  top: -24px;
+  z-index: 1;
+}
+
+/* --- footer css end */
