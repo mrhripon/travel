@@ -191,7 +191,7 @@ function addEventToPackages() {
     let totalPackage = document.querySelectorAll('.package-card');
     totalPackage.forEach(each => {
         each.addEventListener('click', function (event) {
-            alert(each.id)
+
             localStorage.setItem('sku-info', each.id)
         })
     })
