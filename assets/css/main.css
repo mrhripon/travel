@@ -421,3 +421,75 @@ ol {
 }
 
 /* --- footer css end */
+
+
+/* --- sku page css start */
+.step-area {
+  padding: 40px 0;
+}
+
+.single-step p {
+  font-size: 15px;
+  color: #666;
+  margin-top: 16px;
+}
+
+.about-area {
+  padding: 40px 0;
+}
+
+.about-content .para:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.ttl-p {
+  margin-bottom: 5px !important;
+  font-family: proximaNovaSemibold;
+}
+
+.para .para-group:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.about-content p {
+  color: #666666;
+  font-size: 18px;
+}
+
+.faq-area {
+  padding: 40px 0;
+}
+
+.sku-wrapper {
+  padding: 40px;
+}
+
+.sku-area {
+  padding: 40px 0;
+}
+
+.product-box {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: 70px auto;
+  grid-gap: 15px;
+}
+
+#thumbnail-slider .thumb-slide,
+#thumbnail-slider .thumb-slide img {
+  height: 100%;
+  border-radius: 4px;
+}
+
+.package-content.plc-2 {
+  border: 1px solid #CCCCCC;
+  padding: 24px;
+  padding-top: 22px;
+}
+
+.splide__slide {
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* --- sku page css end */

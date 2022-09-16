@@ -57,59 +57,6 @@
     </header>
 
     <main>
-        <div class="hero-area overflow-hidden">
-            <div class="splide hero-carousel" aria-label="Splide Basic HTML Example">
-                <div class="splide__track">
-                    <ul class="splide__list">
-                        <li class="splide__slide">
-                            <div class="hero-carousel-item">
-                                <img src="assets/img/hero-banner-1.png" alt="" class="desktop-version w-100">
-                            </div>
-                        </li>
-                        <li class="splide__slide">
-                            <div class="hero-carousel-item">
-                                <img src="assets/img/hero-banner-1.png" alt="" class="desktop-version w-100">
-                            </div>
-                        </li>
-                        <li class="splide__slide">
-                            <div class="hero-carousel-item">
-                                <img src="assets/img/hero-banner-1.png" alt="" class="desktop-version w-100">
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <!--./.hero-area -->
-
-        <div class="travel-place-area">
-            <div class="container cs-padding">
-                <div class="section-title text-center">
-                    <h2 class="secondary-title">
-                        Viajar é para todos!
-                    </h2>
-                    <p>Pacotes com preços imbatíveis</p>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="travel-img">
-                            <img src="assets/img/p-1.png" class="img-fluid w-100" alt="">
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="travel-img">
-                            <img src="assets/img/p-2.png" class="img-fluid w-100" alt="">
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="travel-img">
-                            <img src="assets/img/p-3.png" class="img-fluid w-100" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> <!-- ./travel-place-area -->
 
         <div class="package-area">
             <div class="container cs-padding">
@@ -151,44 +98,49 @@
                         </select>
                     </div>
                 </div> <!-- ./filter-wrapper -->
-                <h3 class="tertiary-title mb-4">Veja todas as opções de pacote</h3>
-                <div id="home-packages"></div>
-                <div class="text-center mt-5">
-                    <a href="view-all.html" class="btn box-btn">Veja tudo</a>
+
+                <div class="row" id="all-packages">
+                    <!-- <div class="col-3">
+                        <a href="#" class="package-card d-block">
+                            <div class="package-card-inner">
+                                <div class="package-thumb position-relative">
+                                    <img src="assets/img/place-1.png" alt="" class="img-fluid w-100">
+                                    <span class="badge bg-green position-absolute">Nacional</span>
+                                </div>
+                                <div class="package-content">
+                                    <h4 class="place-name">São Paulo</h4>
+                                    <h3 class="price-blk">
+                                        <span class="from d-block">A partir de</span>
+                                        R$ <span class="pkg-price d-inline-block">529</span>
+                                    </h3>
+
+                                    <ul class="facilites">
+                                        <li><img src="assets/img/airplane.svg" alt="">Voo (ida e volta)</li>
+                                        <li><img src="assets/img/accomodation.svg" alt="">Hospedagem</li>
+                                        <li><img src="assets/img/breakfast.svg" alt="">Café da manhã</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                    </div> -->
                 </div>
             </div>
         </div> <!-- ./package-area -->
 
-        <div class="showcase-area">
-            <div class="container cs-padding">
-                <div class="row gx-4">
-                    <div class="col">
-                        <div class="showcase-img">
-                            <img src="assets/img/g-1.png" alt="" class="img-fluid w-100">
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div>
-                            <div class="showcase-img mb-4">
-                                <img src="assets/img/g-2.png" alt="" class="img-fluid w-100">
-                            </div>
-                            <div class="showcase-img">
-                                <img src="assets/img/g-3.png" alt="" class="img-fluid w-100">
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="para text-center">
-                    <h3 class="tertiary-title">Independente de onde você esteja e para onde queira ir, conte sempre com
-                        a gente</h3>
-                    <p>Com 123milhas, você não precisa ter milhas para comprar passagens com até 50% de desconto. Aqui
-                        somos nós que adquirimos milhas e as usamos para emitir passagens com desconto que você pode
-                        pagar via PIX, boleto ou cartão.</p>
-                </div>
-            </div>
-        </div>
+
+
+
     </main>
+
+
+    <div class="container cs-padding">
+        <div class="row">
+
+        </div>
+    </div>
+
+
 
     <footer class="footer-area bg-white border-top position-relative">
         <span class="sq d-inline-block position-absolute start-50 border bg-white border-bottom-0"></span>
@@ -208,10 +160,11 @@
         </div>
     </footer>
 
-    <script>
 
 
-    </script>
+
+
+
 
     <!-- Popper Js -->
     <script src="assets/js/popper.min.js"></script>
@@ -224,15 +177,24 @@
     <script src="assets/js/nice-select2.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            let heroCarousel = new Splide('.hero-carousel', {
-                perPage: 1
-            });
-            heroCarousel.mount();
+            // let heroCarousel = new Splide('.hero-carousel', {
+            //     perPage: 1
+            // });
+            // heroCarousel.mount();
 
 
             NiceSelect.bind(document.getElementById("departure_place"), { searchable: true });
             NiceSelect.bind(document.getElementById("number_of_day"));
             NiceSelect.bind(document.getElementById("number_of_package"));
+
+
+
+
+
+
+
+
+
         });
     </script>
     <!-- Main Js -->

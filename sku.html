@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Document Title Here</title>
+
+    <!-- Favicon Icon -->
+    <link rel="shortcut icon" href="assets/img/logo.ico" type="image/png">
+
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!-- Fontawesome css -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+
+    <!-- Plugin Css  -->
+    <link rel="stylesheet" href="assets/css/splide.min.css">
+    <link rel="stylesheet" href="assets/css/nice-select2.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <!-- Responsive css -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+
+</head>
+
+<body>
+    <!-- <div id="preloader">
+        <div class="loader3">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div class="overlay"></div> -->
+
+    <header class="header-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-6">
+                    <form action="#" class="header-search">
+                        <input type="text" class="form-control w-100 border-0">
+                    </form>
+                </div>
+                <div class="col-3"></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="sku-area">
+            <div class="container cs-padding">
+                <div class="sku-wrapper bg-white">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <div class="product-box" id="package-slider">
+                                <div id="thumbnail-slider" class="splide" aria-label="Splide Basic HTML Example">
+                                    <div class="splide__track">
+                                        <ul class="splide__list">
+                                            <!-- <li class="splide__slide">
+                                            <div class="thumb-slide">
+                                                <img class="img-fluid w-100" src="assets/img/place-1.png" alt="">
+                                            </div>
+                                        </li> -->
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div id="main-slider" class="splide" aria-label="Splide Basic HTML Example">
+                                    <div class="splide__track">
+                                        <ul class="splide__list">
+                                            <!-- <li class="splide__slide">
+                                            <div class="thumb-slide">
+                                                <img class="img-fluid w-100" src="assets/img/place-1.png" alt="">
+                                            </div>
+                                        </li> -->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="package-content plc-2">
+                                <h4 class="place-name">Jijoca de Jericoacoara, Ceará </h4>
+                                <h3 class="price-blk">
+                                    <span class="from d-block">Está incluso:</span>
+                                </h3>
+
+                                <ul class="facilites">
+                                    <li><img src="assets/img/airplane.svg" alt="">Voo (ida e volta)</li>
+                                    <li><img src="assets/img/accomodation.svg" alt="">Hospedagem</li>
+                                    <li><img src="assets/img/breakfast.svg" alt="">Café da manhã</li>
+                                </ul>
+
+                                <div class="more-hotels">
+                                    <p>Você ficará hospedado em um dos hotéis da lista</p>
+                                    <button>Veja aqui a lista de hotéis!</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="package-area">
+            <div class="container cs-padding">
+                <h2 class="secondary-title text-center mb-3">Encontre o pacote certo pra você</h2>
+                <div class="filter-wrapper border_radius_4 d-flex align-items-center justify-content-center flex-wrap">
+                    <div
+                        class="filter-type partida position-relative border_radius_4 d-flex align-items-center flex-wrap me-3">
+                        <p class="position-absolute">Local de partida</p>
+                        <select name="" id="departure_place" class="selection">
+                            <option value="place_1" selected>Belem</option>
+                            <option value="place_2">Belo Horizonte</option>
+                            <option value="place_3">Brasilia</option>
+                            <option value="place_4">Curitiba</option>
+                            <option value="place_5">Goiania</option>
+                            <option value="place_6">Manaus</option>
+                            <option value="place_7">Porto Alegre</option>
+                            <option value="place_8">Recife</option>
+                            <option value="place_9">Rio de Janeiro</option>
+                            <option value="place_10">Salvador</option>
+                            <option value="place_11">São Paulo</option>
+                        </select>
+                    </div>
+                    <div
+                        class="filter-type diar position-relative border_radius_4 d-flex align-items-center flex-wrap me-3">
+                        <p class="position-absolute">Quantidade diárias</p>
+                        <select name="" id="number_of_day" class="selection">
+                            <option value="3" selected>3 diárias</option>
+                            <option value="5">5 diárias</option>
+                            <option value="7">7 diárias</option>
+                        </select>
+                    </div>
+                    <div class="filter-type pac position-relative border_radius_4">
+                        <p class="position-absolute">Pacotes</p>
+                        <select name="" id="number_of_package" class="selection">
+                            <option value="1" selected>1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                </div> <!-- ./filter-wrapper -->
+
+                <div class="row" id="all-packages">
+                    <!-- <div class="col-3">
+                        <a href="#" class="package-card d-block">
+                            <div class="package-card-inner">
+                                <div class="package-thumb position-relative">
+                                    <img src="assets/img/place-1.png" alt="" class="img-fluid w-100">
+                                    <span class="badge bg-green position-absolute">Nacional</span>
+                                </div>
+                                <div class="package-content">
+                                    <h4 class="place-name">São Paulo</h4>
+                                    <h3 class="price-blk">
+                                        <span class="from d-block">A partir de</span>
+                                        R$ <span class="pkg-price d-inline-block">529</span>
+                                    </h3>
+
+                                    <ul class="facilites">
+                                        <li><img src="assets/img/airplane.svg" alt="">Voo (ida e volta)</li>
+                                        <li><img src="assets/img/accomodation.svg" alt="">Hospedagem</li>
+                                        <li><img src="assets/img/breakfast.svg" alt="">Café da manhã</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                    </div> -->
+                </div>
+            </div>
+        </div> <!-- ./package-area -->
+
+        <div class="step-area">
+            <div class="container cs-padding">
+                <h1 class="primary-title text-center">Como funciona</h1>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="single-step text-center">
+                            <img src="assets/img/w-1.png" alt="" class="step-img img-fluid">
+                            <p>Escolha o mês, dia da sua ida e a quantidade de diárias. Lembre-se que você precisa ter
+                                flexibilidade de 24h para antes ou depois dos dias de ida e volta.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="single-step text-center">
+                            <img src="assets/img/w-2.png" alt="" class="step-img img-fluid">
+                            <p>Após a compra, em até 20 dias, enviaremos por e-mail um formulário para preenchimento dos
+                                dados dos passageiros, assim como eventuais observações. Caso não receba o formulário
+                                dentro do prazo de 20 dias após a compra, é de responsabilidade do cliente acionar a
+                                123Milhas para solicitar um novo envio.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="single-step text-center">
+                            <img src="assets/img/w-3.png" alt="" class="step-img img-fluid">
+                            <p>Em até 10 dias antes da sua data escolhida, enviaremos toda documentação com os dados da
+                                sua viagem. Agora é só arrumar as malas e começar a contagem regressiva para diversão!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- ./step-area -->
+
+
+        <div class="about-area">
+            <div class="container cs-padding">
+                <h1 class="primary-title text-center">Sobre</h1>
+                <div class="row">
+                    <div class="offset-lg-2 col-lg-8">
+                        <div class="about-content">
+                            <div class="para">
+                                <p>Passagem aérea de ida e volta para Jericoacoara – Aeroportos de Fortaleza (FOR), em
+                                    classe
+                                    econômica, podendo haver conexão e/ou escala nos trechos.</p>
+                                <p>Para compras efetuadas a partir do dia 10/04/2022 a passagem poderá ser emitida para
+                                    24h
+                                    antes ou depois da data escolhida.</p>
+                            </div>
+
+                            <div class="para">
+                                <div class="para-group">
+                                    <p class="ttl-p">Por exemplo: </p>
+                                    <p>Se você escolheu: ida dia 20, volta dia 25; </p>
+                                </div>
+
+                                <div class="para-group">
+                                    <p class="ttl-p">Podemos emitir: </p>
+                                    <p>Ida dia 19, volta dia 24; ou <br> Ida dia 20, volta dia 25; ou <br>Ida dia 21,
+                                        volta dia
+                                        26;
+                                    </p>
+                                    <p>Para compras efetuadas até 09/04/2022 a passagem poderá ser emitida em uma das
+                                        três datas
+                                        de
+                                        sua escolha, conforme disponibilidade verificada pela 123milhas.</p>
+                                </div>
+                            </div>
+
+                            <div class="para">
+                                <div class="para-group">
+                                    <p class="ttl-p"> Por exemplo:</p>
+                                    <p>Se você escolheu: Ida dia 19, 20 e 21</p>
+                                </div>
+
+                                <div class="para-group">
+                                    <p class="ttl-p">Podemos emitir:</p>
+                                    <p>Ida dia 19, 20 ou 21</p>
+                                    <p>Volta conforme data de emissão da ida e número de diárias do pacote escolhido.
+                                        É imprescindível que você possua essa flexibilidade.</p>
+                                </div>
+                            </div>
+
+                            <div class="para">
+                                <p class="ttl-p">Bagagem</p>
+                                <p>Sua mala de mão deve pesar até 10kg para ser acomodada no bagageiro do avião. Caso
+                                    exceda
+                                    esse
+                                    limite, o envio das bagagens extras deve ser comprado diretamente com a companhia
+                                    aérea.</p>
+                            </div>
+
+                            <div class="para">
+                                <p class="ttl-p">Hospedagem</p>
+                                <p>Nesta oferta, a 123milhas definirá a hospedagem em Jericoacoara, a partir da
+                                    disponibilidade
+                                    e
+                                    tarifário promocional dos parceiros locais.</p>
+                            </div>
+                            <div class="para">
+                                <p> De acordo com a disponibilidade, as pessoas ficarão em quartos duplos ou triplos, em
+                                    hotéis
+                                    de três
+                                    estrelas.</p>
+                            </div>
+                            <div class="para">
+
+                                <p>*Compras realizadas até 02/05/2022 serão reservados hotéis com no mínimo 3 estrelas.
+
+
+                                </p>
+                                <p>*Compras realizadas a partir do dia 03/05/2022 seguem a lista de hotéis
+                                    pré-definidos.</p>
+                                <p></p>
+
+
+                            </div>
+                            <div class="para">
+                                <p class="ttl-p">Observações</p>
+                                <p>As diárias são contabilizadas pelas noites dormidas a partir da sua chegada no
+                                    hotel/pousada;
+                                </p>
+                            </div>
+
+                            <div class="para">
+                                <p>Por ser um pacote promocional, a 123milhas não realiza personalizações como: redução
+                                    do
+                                    número de
+                                    diárias, troca da cidade de origem ou de destino e venda do despacho de bagagens
+                                    extras;</p>
+                            </div>
+
+                            <div class="para">
+                                <p>Este pacote não inclui transfer e passeios.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- ./about-area -->
+
+        <div class="faq-area bg-white">
+            <div class="container cs-padding">
+                <h1 class="primary-title text-center">Dúvidas</h1>
+                <div class="row">
+                    <div class="offset-lg-2 col-lg-8">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true">
+                                    Taxas
+                                </button>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque eius
+                                            quae,
+                                            repudiandae commodi deleniti distinctio. Lorem ipsum dolor sit amet
+                                            consectetur
+                                            adipisicing elit. Illo qui consectetur illum repudiandae iure quod.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- ./faq-area -->
+
+    </main>
+
+
+
+    <footer class="footer-area bg-white border-top position-relative">
+        <span class="sq d-inline-block position-absolute start-50 border bg-white border-bottom-0"></span>
+        <div class="container cs-padding">
+            <div class="footer-content">
+                <ul class="ft-menu d-flex align-items-center flex-wrap">
+                    <li><a href="#" class="d-inline-block">Trabalhe conosco</a></li>
+                    <li><a href="#" class="d-inline-block">Termos e condições</a></li>
+                    <li><a href="#" class="d-inline-block">Políticas de privacidade</a></li>
+                    <li><a href="#" class="d-inline-block">Contato</a></li>
+                </ul>
+                <div class="ft-text">
+                    <p>Cursus condimentum auctor scelerisque posuere ac eu volutpat</p>
+                    <p class="mb-0">Massa erat volutpat gravida vel. Proin at mollis fusce sed nulla aliquam nulla.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+    <!-- Popper Js -->
+    <script src="assets/js/popper.min.js"></script>
+
+    <!-- Bootstrap Js -->
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugin Js  -->
+    <script src="assets/js/splide.min.js"></script>
+    <script src="assets/js/nice-select2.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var main = new Splide('#main-slider', {
+                type: 'fade',
+                heightRatio: 0.5,
+                pagination: false,
+                arrows: false,
+                cover: true,
+            });
+
+            var thumbnails = new Splide('#thumbnail-slider', {
+                rewind: true,
+                fixedWidth: 54,
+                fixedHeight: 54,
+                isNavigation: true,
+                gap: 8,
+                focus: 'top',
+                direction: 'ttb',
+                height: '30rem',
+                pagination: false,
+                cover: true,
+                dragMinThreshold: {
+                    mouse: 4,
+                    touch: 10,
+                },
+                breakpoints: {
+                    640: {
+                        fixedWidth: 66,
+                        fixedHeight: 38,
+                    },
+                },
+            });
+
+            main.sync(thumbnails);
+            main.mount();
+            thumbnails.mount();
+
+        });
+    </script>
+    <!-- Main Js -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
