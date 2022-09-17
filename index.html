@@ -9,16 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Title -->
-    <title>Document Title Here</title>
+    <title>Home Page</title>
 
     <!-- Favicon Icon -->
     <link rel="shortcut icon" href="assets/img/logo.ico" type="image/png">
 
     <!-- Bootstrap css -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-
-    <!-- Fontawesome css -->
-    <link rel="stylesheet" href="assets/css/all.min.css">
 
     <!-- Plugin Css  -->
     <link rel="stylesheet" href="assets/css/splide.min.css">
@@ -153,7 +150,7 @@
                 </div> <!-- ./filter-wrapper -->
                 <h3 class="tertiary-title mb-4">Veja todas as opções de pacote</h3>
                 <div id="home-packages"></div>
-                <div class="text-center mt-5">
+                <div class="text-center mt-4">
                     <a href="view-all.html" class="btn box-btn">Veja tudo</a>
                 </div>
             </div>
@@ -164,16 +161,16 @@
                 <div class="row gx-4">
                     <div class="col">
                         <div class="showcase-img">
-                            <img src="assets/img/g-1.png" alt="" class="img-fluid w-100">
+                            <img src="assets/img/g-1.png" alt="" class="img-fluid w-100 border_radius_4">
                         </div>
                     </div>
                     <div class="col">
                         <div>
                             <div class="showcase-img mb-4">
-                                <img src="assets/img/g-2.png" alt="" class="img-fluid w-100">
+                                <img src="assets/img/g-2.png" alt="" class="img-fluid w-100 border_radius_4">
                             </div>
                             <div class="showcase-img">
-                                <img src="assets/img/g-3.png" alt="" class="img-fluid w-100">
+                                <img src="assets/img/g-3.png" alt="" class="img-fluid w-100 border_radius_4">
                             </div>
                         </div>
                     </div>
@@ -222,19 +219,7 @@
     <!-- Plugin Js  -->
     <script src="assets/js/splide.min.js"></script>
     <script src="assets/js/nice-select2.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            let heroCarousel = new Splide('.hero-carousel', {
-                perPage: 1
-            });
-            heroCarousel.mount();
 
-
-            NiceSelect.bind(document.getElementById("departure_place"), { searchable: true });
-            NiceSelect.bind(document.getElementById("number_of_day"));
-            NiceSelect.bind(document.getElementById("number_of_package"));
-        });
-    </script>
     <!-- Main Js -->
     <script src="assets/js/main.js"></script>
 </body>

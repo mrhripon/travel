@@ -11,10 +11,13 @@
                 "departure_id": "place_1",
                 "sku": {
                     "skuImg": [
-                        "https://i.ibb.co/jLF3rPz/place-2.png",
-                        "https://i.ibb.co/jLF3rPz/place-2.png",
-                        "assets/img/place-3.png",
-                        "assets/img/place-4.png",
+                        "assets/img/h-1.webp",
+                        "assets/img/h-2.webp",
+                        "assets/img/h-3.webp",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
                         "assets/img/place-5.png"
                     ],
                     "skuData": ""

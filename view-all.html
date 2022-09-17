@@ -34,14 +34,6 @@
 </head>
 
 <body>
-    <!-- <div id="preloader">
-        <div class="loader3">
-            <span></span>
-            <span></span>
-        </div>
-    </div>
-    <div class="overlay"></div> -->
-
     <header class="header-area">
         <div class="container">
             <div class="row">
@@ -123,7 +115,7 @@
                     </div>
                 </div> <!-- ./filter-wrapper -->
 
-                <div class="row" id="all-packages">
+                <div class="row mb-3" id="all-packages">
                     <!-- <div class="col-3">
                         <a href="#" class="package-card d-block">
                             <div class="package-card-inner">
@@ -170,33 +162,17 @@
         </div>
     </footer>
 
-    <script>
 
 
-    </script>
+    <!-- All Js here  -->
 
-    <!-- Popper Js -->
-    <script src="assets/js/popper.min.js"></script>
-
-    <!-- Bootstrap Js -->
+    <!-- Bootstrap Js (not included popper js)-->
     <script src="assets/js/bootstrap.min.js"></script>
 
     <!-- Plugin Js  -->
     <script src="assets/js/splide.min.js"></script>
     <script src="assets/js/nice-select2.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            let heroCarousel = new Splide('.hero-carousel', {
-                perPage: 1
-            });
-            heroCarousel.mount();
 
-
-            NiceSelect.bind(document.getElementById("departure_place"), { searchable: true });
-            NiceSelect.bind(document.getElementById("number_of_day"));
-            NiceSelect.bind(document.getElementById("number_of_package"));
-        });
-    </script>
     <!-- Main Js -->
     <script src="assets/js/main.js"></script>
 </body>

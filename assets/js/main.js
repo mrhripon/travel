@@ -9,6 +9,7 @@ const APP_URL = './data.json';
 
 // Global Variable 
 let homePackages, allPackages, departurePlace, departurePlaceValue, data;
+
 // Getting Page Name
 let pageName = (() => {
     return window.location.pathname.split("/").pop();
@@ -21,11 +22,9 @@ if (pageName === page_home) {
     departurePlaceValue = departurePlace.value;
     homePackages = document.getElementById('home-packages');
 }
-
 if (pageName === page_viewAll) {
     allPackages = document.getElementById('all-packages');
 }
-
 
 // Function for Getting JSON Data 
 const getData = async function (url) {
@@ -62,7 +61,21 @@ if (pageName === page_home) {
     window.addEventListener('DOMContentLoaded', function () {
         getData(APP_URL);
     })
+}
 
+// Script For hero slider and filter selection 
+if (pageName === page_home || pageName === page_viewAll) {
+    window.addEventListener('DOMContentLoaded', function () {
+        let heroCarousel = new Splide('.hero-carousel', {
+            perPage: 1,
+            speed: 2000,
+            rewind: 'loop'
+        });
+        heroCarousel.mount();
+        NiceSelect.bind(document.getElementById("departure_place"), { searchable: true });
+        NiceSelect.bind(document.getElementById("number_of_day"));
+        NiceSelect.bind(document.getElementById("number_of_package"));
+    })
 }
 
 // Function For Render Packages in Home page 
@@ -201,8 +214,6 @@ function addEventToPackages() {
 
 // ============= sku page part ============
 if (pageName === page_sku) {
-    console.log(localStorage.getItem('sku-info'))
-    const packageSlider = document.getElementById('package-slider');
 
     function getDesiredSku() {
         const skuId = localStorage.getItem('sku-info');
@@ -221,15 +232,13 @@ if (pageName === page_sku) {
 
     function renderSku(data) {
         let html = '';
-
-        const packageSlider = document.getElementById('package-slider');
         const thumbnailSlider = document.getElementById('thumbnail-slider');
         const thumbSlContent = thumbnailSlider.querySelector('.splide__list');
         const mainSlider = document.getElementById('main-slider');
         const mainSlContent = mainSlider.querySelector('.splide__list');
         data[0].sku.skuImg.forEach(each => {
             html += `<li class="splide__slide">
-            <div class="thumb-slide">
+            <div class="thumb-slide border_radius_4 overflow-hidden">
                 <img class="img-fluid w-100" src="${each}" alt="">
             </div>
         </li>`
@@ -245,6 +254,54 @@ if (pageName === page_sku) {
 
     // 2. Render Sku Data 
     renderSku(skuData)
+
+
+    // 3. Calling slider activation 
+    document.addEventListener('DOMContentLoaded', function () {
+        var main = new Splide('#main-slider', {
+            type: 'fade',
+            heightRatio: 0.478,
+            pagination: false,
+            arrows: false,
+            cover: true,
+        });
+
+        var thumbnails = new Splide('#thumbnail-slider', {
+            rewind: true,
+            fixedWidth: 54,
+            fixedHeight: 54,
+            isNavigation: true,
+            arrows: false,
+            gap: 8,
+            focus: 'center',
+            direction: 'ttb',
+            height: '300px',
+            pagination: false,
+            cover: true,
+            dragMinThreshold: {
+                mouse: 4,
+                touch: 10,
+            },
+            breakpoints: {
+                640: {
+                    fixedWidth: 66,
+                    fixedHeight: 38,
+                },
+            },
+        });
+
+        main.sync(thumbnails);
+        main.mount();
+        thumbnails.mount();
+
+    });
+
+    // 4. script for activation Select menu
+    NiceSelect.bind(document.getElementById("origin"), { searchable: true });
+    NiceSelect.bind(document.getElementById("month"), { searchable: true });
+    NiceSelect.bind(document.getElementById("departure_date"), { searchable: true });
+    NiceSelect.bind(document.getElementById("number_of_day"));
+    NiceSelect.bind(document.getElementById("number_of_package"));
 }
 
 

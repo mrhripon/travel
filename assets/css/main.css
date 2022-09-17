@@ -10,6 +10,11 @@
   src: url(../fonts/FontsFree-Net-Proxima-Nova-Sbold.otf);
 }
 
+@font-face {
+  font-family: proximaNovaBold;
+  src: url(../fonts/FontsFree-Net-Proxima-Nova-Bold.otf);
+}
+
 body {
   font-family: proximaNovaRegular;
   font-weight: normal;
@@ -99,9 +104,9 @@ ol {
 .primary-title {
   font-family: proximaNovaSemiBold;
   font-weight: 600;
-  font-size: 32px;
+  font-size: 30px;
   line-height: 1.1;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
 .secondary-title {
@@ -219,18 +224,69 @@ ol {
   border-radius: 50%;
   transition: .3s;
   cursor: pointer;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  overflow: hidden;
+}
+
+.splide__arrow::after {
+  width: 100%;
+  height: 100%;
+  background-color: #3483FA;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  transition: .4s;
+}
+
+.splide__arrow--prev::after {
+  right: -100%;
+
+}
+
+.splide__arrow--prev:hover:after {
+  right: 0;
+}
+
+.splide__arrow--next::after {
+  left: -100%;
+
+}
+
+.splide__arrow--next:hover:after {
+  left: 0;
+}
+
+.splide__arrow:disabled {
+  opacity: 1;
 }
 
 .splide__arrow:hover {
-  background-color: #F5F5F5;
+  background-color: #3483FA;
+}
+
+.splide__arrow svg {
+  fill: #3483FA;
+  height: 1em;
+  width: 1em;
+  transition: .3s;
+  position: relative;
+  z-index: 1;
+}
+
+.splide__arrow:hover svg {
+  fill: #fff;
 }
 
 .splide__arrow--prev {
   left: -32px;
+  padding-left: 24px;
 }
 
 .splide__arrow--next {
   right: -32px;
+  padding-right: 24px;
 }
 
 .splide__pagination li button {
@@ -321,10 +377,11 @@ ol {
 }
 
 .package-thumb {
-  height: 180.317px;
+  height: 180px;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .bg-green {
@@ -339,6 +396,7 @@ ol {
   font-size: 11px;
   font-family: proximaNovaRegular;
   font-weight: 400;
+  padding: 4px 8px;
 }
 
 .filter-type.partida p,
@@ -352,9 +410,15 @@ ol {
 }
 
 .filter-type .nice-select {
-  font-family: proximaNovaSemiBold;
+  font-family: proximaNovaRegular;
   padding-left: 148px;
   padding-right: 24px;
+  color: #666666;
+  font-size: 15px;
+}
+
+.filter-type .nice-select .current {
+  font-family: proximaNovaSemiBold;
 }
 
 .nice-select-dropdown {
@@ -363,6 +427,18 @@ ol {
 
 .filter-type.diar .nice-select {
   padding-left: 165px;
+}
+
+.filter-type.pac .nice-select {
+  padding-left: 90px;
+}
+
+.filter-type.pac {
+  min-width: 125px;
+}
+
+#home-packages .pkg-rw:not(:last-child) {
+  margin-bottom: 24px;
 }
 
 /* --- package-area css end */
@@ -375,17 +451,12 @@ ol {
 
 .showcase-area .para {
   padding: 40px 0px;
-  margin-bottom: 44px;
+  margin-bottom: 50px;
 }
 
 /* --- showcase-area css end */
 
 /* --- footer css start */
-.showcase-img img {
-  border-radius: 4px;
-}
-
-
 .footer-area {
   padding: 24px 0;
 }
@@ -395,6 +466,10 @@ ol {
   font-size: 15px;
   text-decoration: none;
   transition: .3s;
+}
+
+.ft-menu li a:hover {
+  color: #3483FA;
 }
 
 .ft-menu li:not(:last-child) {
@@ -426,6 +501,7 @@ ol {
 /* --- sku page css start */
 .step-area {
   padding: 40px 0;
+  padding-top: 30px;
 }
 
 .single-step p {
@@ -457,11 +533,13 @@ ol {
 }
 
 .faq-area {
-  padding: 40px 0;
+  padding: 50px 0;
+  padding-bottom: 65px;
 }
 
 .sku-wrapper {
   padding: 40px;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.15);
 }
 
 .sku-area {
@@ -471,14 +549,21 @@ ol {
 .product-box {
   display: -ms-grid;
   display: grid;
-  grid-template-columns: 70px auto;
+  grid-template-columns: 54px auto;
   grid-gap: 15px;
 }
 
 #thumbnail-slider .thumb-slide,
 #thumbnail-slider .thumb-slide img {
   height: 100%;
-  border-radius: 4px;
+}
+
+.splide__track--nav>.splide__list>.splide__slide {
+  border: 2px solid transparent;
+}
+
+.splide__track--nav>.splide__list>.splide__slide.is-active {
+  border: 2px solid #3483FA;
 }
 
 .package-content.plc-2 {
@@ -492,4 +577,337 @@ ol {
   overflow: hidden;
 }
 
+.accordion-button::after {
+  flex-shrink: 0;
+  width: 15px;
+  height: 15px;
+  margin-left: auto;
+  content: "";
+  background-image: url("../img/down-arw.svg") !important;
+  background-repeat: no-repeat;
+  background-size: 14px;
+  transition: transform .2s ease-in-out;
+}
+
+.accordion-item {
+  margin-bottom: 10px;
+}
+
+.accordion-item:last-of-type .accordion-button {
+  border-radius: 0 !important;
+}
+
+.package-content.plc-2 .place-name {
+  color: #000000;
+  font-family: proximaNovaBold;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.package-content.plc-2 .price-blk .from {
+  font-size: 13px;
+  color: #666666;
+}
+
+.package-content.plc-2 .facilites li {
+  color: #666666;
+  font-size: 13px;
+}
+
+.package-content.plc-2 .facilites {
+  margin-bottom: 15px;
+}
+
+.package-content.plc-2 .price-blk {
+  margin-bottom: 10px;
+}
+
+.more-hotels p {
+  color: #666666;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.btn.box-btn.bg-light-blue {
+  background-color: #E0EBFA;
+  color: #3483FA;
+}
+
+.package-content.plc-2 .facilites {
+  margin-bottom: 16px;
+  min-height: 98px;
+}
+
+#main-slider .thumb-slide img,
+#main-slider .thumb-slide {
+  height: 100%;
+}
+
+.modal-dialog.hotel-list {
+  max-width: 600px;
+}
+
+.modal-dialog.hotel-list .modal-body {
+  padding: 24px;
+}
+
+.hotels-list>li {
+  display: grid;
+  grid-template-columns: 250px auto;
+  grid-gap: 15px;
+  box-shadow: 0px -1px 2px rgba(0, 0, 0, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  align-items: center;
+}
+
+.hotels-list>li:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.hotel-list-content {
+  padding: 24px;
+}
+
+.hotel-list-content h4 {
+  font-size: 20px;
+  font-family: proximaNovaSemiBold;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.hotel-thumb {
+  height: 190px;
+}
+
+.hotel-thumb img {
+  height: 100%;
+}
+
+.hotel-list-content .facilites {
+  text-align: center;
+}
+
+.modal-header h5 {
+  color: #333333;
+  font-size: 24px;
+  font-family: proximaNovaSemiBold;
+}
+
+.modal-header .btn-close {
+  top: 60%;
+  transform: translateY(-50%);
+  right: 15px;
+  opacity: 1;
+}
+
+.filter-type.type-2 p {
+  font-size: 14px;
+  color: #999999;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.note {
+  background: #FFD8C1;
+  display: inline-block;
+  font-size: 14px;
+  color: #333333;
+  text-align: center;
+  padding: 10px 24px;
+}
+
+.total-cost-wrapper {
+  border-top: 1px solid #CCCCCC;
+  padding-top: 37px;
+}
+
+.price-blk.type-2 {
+  color: #333333;
+  font-size: 48px;
+  line-height: 1;
+}
+
+.payment-terms-text {
+  font-size: 12px;
+  color: #333333;
+  line-height: 1.5;
+  text-align: left;
+  margin-left: 22px;
+  margin-right: 24px;
+}
+
+.payment-terms-text span {
+  display: inline;
+  color: #00BCFF;
+}
+
+.total-wrapper {
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.type-2 .nice-select.selection {
+  border: 1px solid #BBBBBB;
+  border-radius: 4px;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 15px;
+  padding-right: 28px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.type-2 .nice-select.selection::after {
+  content: "";
+  height: 7px;
+  width: 7px;
+  border-width: 1px;
+}
+
+.filter-wrapper.type-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 40px;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 24px;
+}
+
+.accordion-body {
+  padding: 15px 0;
+}
+
 /* --- sku page css end */
+
+
+/* --- confirmation page css start */
+
+.confirmation-area {
+  padding: 75px 0;
+}
+
+.confirmation-outer-wrap {
+  max-width: 728px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.15);
+  padding: 40px;
+}
+
+.h-thumb img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.h-thumb {
+  margin-bottom: 10px;
+}
+
+.hotel-name {
+  font-size: 20px;
+  font-family: proximaNovaSemiBold;
+  color: #222222;
+  margin-bottom: 15px;
+}
+
+.included-facilites p {
+  color: #666666;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.included-facilites ul li {
+  color: #666666;
+}
+
+.included-facilites ul li:not(:last-child) {
+  margin-right: 20px;
+  margin-bottom: 0;
+  position: relative;
+  font-size: 14px;
+}
+
+.included-facilites ul li:not(:last-child):after {
+  content: "";
+  height: 13px;
+  width: 1px;
+  background: #666666;
+  position: absolute;
+  right: -12px;
+  top: 4px;
+}
+
+.included-facilites {
+  margin-bottom: 24px;
+}
+
+.reservation-details p {
+  color: #666666;
+  font-size: 16px;
+  margin: 3px 20px;
+}
+
+.reservation-details p strong {
+  display: inline-block;
+  margin-left: 5px;
+  color: #222222;
+  font-family: proximaNovaSemiBold;
+  font-size: 16px;
+}
+
+.reservation-details {
+  margin-bottom: 15px;
+}
+
+.price-blk.type-2.final .pkg-price {
+  font-size: 32px;
+  color: #333333;
+  margin-left: 5px;
+}
+
+.price-blk.type-2.final {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.payment-terms-text.type-2 {
+  font-size: 16px;
+  color: #222222;
+}
+
+.payment-terms-text.type-2 span {
+  color: #00A650;
+  display: inline-block;
+}
+
+.bottom-part {
+  border-top: 1px solid #CCCCCC;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.payment-form {
+  max-width: 380px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.payment-form .form-label {
+  color: #999999;
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.form-title {
+  color: #222222;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+/* --- confirmation page css end */
