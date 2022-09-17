@@ -20,8 +20,6 @@
     <!-- Main css -->
     <link rel="stylesheet" href="assets/css/main.css">
 
-    <!-- Responsive css -->
-    <link rel="stylesheet" href="assets/css/responsive.css">
 
 
 </head>
@@ -60,7 +58,7 @@
                                 <li><img src="assets/img/breakfast.svg" alt="">Café da manhã</li>
                             </ul>
                         </div>
-                        <div class="reservation-details d-flex flex-wrap">
+                        <div class="reservation-details d-flex justify-content-center flex-wrap">
                             <p>Origem:<strong>São Paulo</strong></p>
                             <p>Mês da viagem:<strong>Novembro/2023</strong></p>
                             <p>Data de partida:<strong>16</strong></p>
@@ -76,25 +74,31 @@
                         <form action="#" class="payment-form">
                             <h5 class="form-title text-center">Preencha as informações com seu nome para finalizar a
                                 compra</h5>
-                            <div class="mb-3">
-                                <label for="input-name" class="form-label">Nome</label>
-                                <input type="text" class="form-control" id="input-name" aria-describedby="emailHelp">
-                            </div>
-                            <div class="mb-3">
-                                <label for="input-password" class="form-label">Data de nascimento</label>
-                                <input type="password" class="form-control" id="input-password">
-                            </div>
-                            <div class="mb-3">
-                                <label for="input-name" class="form-label">E-mail</label>
-                                <input type="email" class="form-control" id="input-name" aria-describedby="emailHelp">
-                            </div>
-                            <div class="mb-3 form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Aceito compartilhar meus dados com a
-                                    123Milhas</label>
+                            <div class="max">
+                                <div class="mb-3">
+                                    <label for="input-name" class="form-label">Nome</label>
+                                    <input type="text" class="form-control" id="input-name"
+                                        aria-describedby="emailHelp">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="input-password" class="form-label">Data de nascimento</label>
+                                    <input type="password" class="form-control" id="input-password">
+                                </div>
+                                <div class="mb-4">
+                                    <label for="input-name" class="form-label">E-mail</label>
+                                    <input type="email" class="form-control" id="input-name"
+                                        aria-describedby="emailHelp">
+                                </div>
+                                <div class="mb-4 form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">Aceito compartilhar meus dados
+                                        com a
+                                        123Milhas</label>
+                                </div>
                             </div>
                             <div class="twin-btn-wrap">
-                                <button type="submit" class="btn box-btn indigo-bg">Pagar com Mercado Pago</button>
+                                <button type="submit" class="btn box-btn indigo-bg"><img class="img-fluid me-2"
+                                        src="assets/img/hand-shake.png" alt="">Pagar com Mercado Pago</button>
                                 <a href="index.html" class="btn box-btn cancel bg-transparent">Cancelar</a>
                             </div>
                         </form>

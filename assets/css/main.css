@@ -81,6 +81,18 @@ a:hover {
   text-decoration: none;
 }
 
+button:focus,
+button:active {
+  outline: none;
+  box-shadow: none !important;
+}
+
+.btn-check:focus+.btn,
+.btn:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
 span,
 a {
   display: inline-block;
@@ -783,9 +795,9 @@ ol {
 
 
 /* --- confirmation page css start */
-
 .confirmation-area {
   padding: 75px 0;
+  padding-bottom: 85px;
 }
 
 .confirmation-outer-wrap {
@@ -891,7 +903,7 @@ ol {
   margin-top: 20px;
 }
 
-.payment-form {
+.payment-form .max {
   max-width: 380px;
   margin-left: auto;
   margin-right: auto;
@@ -908,6 +920,23 @@ ol {
   color: #222222;
   font-size: 16px;
   margin-bottom: 15px;
+}
+
+.form-control {
+  border-color: #BBBBBB;
+}
+
+.form-check-label {
+  color: #999999;
+  font-size: 14px;
+}
+
+.btn.box-btn.cancel.bg-transparent {
+  color: #3483FA;
+}
+
+.twin-btn-wrap {
+  text-align: center;
 }
 
 /* --- confirmation page css end */
