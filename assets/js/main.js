@@ -33,16 +33,11 @@ const getData = async function (url) {
         const response = await fetch(url);
         data = await response.json();
 
-        console.log(data)
-
-        console.log(response.ok)
-
         // 2. Store Data 
         localStorage.setItem('data', JSON.stringify(data));
 
         // 3. Render
         renderHome(data, departurePlaceValue);
-
 
         departurePlace.addEventListener('change', function (event) {
             event.preventDefault();
@@ -98,7 +93,7 @@ async function renderHome(data, query) {
                 }
                 for (let i = 0; i < dataFiltered.length; i++) {
                     if (i === 4) break;
-                    innerHtml += `<div class="col-3 mb-4"><a href="sku.html" id="${dataFiltered[i].id}" class="package-card d-block">
+                    innerHtml += `<div class="col-xl-3 col-lg-4 col-6 mb-4"><a href="sku.html" id="${dataFiltered[i].id}" class="package-card d-block">
                     <div class="package-card-inner">
                         <div class="package-thumb position-relative">
                             <img src="${dataFiltered[i].package_thumb}" alt="" class="img-fluid w-100">
@@ -131,7 +126,6 @@ async function renderHome(data, query) {
     addEventToPackages();
 }
 
-
 // Function For Render Packages in view-all page 
 function renderViewAll(data, query) {
     let html = '';
@@ -151,7 +145,7 @@ function renderViewAll(data, query) {
                 console.log(dataFiltered)
 
                 for (let i = 0; i < dataFiltered.length; i++) {
-                    innerHtml += `<div class="col-3 mb-4"><a href="sku.html" class="package-card d-block">
+                    innerHtml += `<div class="col-xl-3 col-lg-4 col-6 mb-4"><a href="sku.html" class="package-card d-block">
                 <div class="package-card-inner">
                     <div class="package-thumb position-relative">
                         <img src="${dataFiltered[i].package_thumb}" alt="" class="img-fluid w-100">
@@ -182,7 +176,7 @@ function renderViewAll(data, query) {
 }
 
 if (pageName === page_viewAll) {
-    // console.log(JSON.parse(sessionStorage.getItem('data')));
+
     // 1. Getting Data 
     let data = JSON.parse(localStorage.getItem('data'));
     // 2. Filter Data 
@@ -214,6 +208,12 @@ function addEventToPackages() {
 
 // ============= sku page part ============
 if (pageName === page_sku) {
+    const origin = document.getElementById("origin");
+    const month = document.getElementById("month");
+    const departureDate = document.getElementById("departure_date");
+    const numberOfStay = document.getElementById("number_of_day");
+    const numberOfPackage = document.getElementById("number_of_package");
+    const pkgPrice = document.getElementById('pkg-price');
 
     function getDesiredSku() {
         const skuId = localStorage.getItem('sku-info');
@@ -245,6 +245,7 @@ if (pageName === page_sku) {
         })
         thumbSlContent.innerHTML = html;
         mainSlContent.innerHTML = html;
+        pkgPrice.innerHTML = data[0].price;
 
         console.log(data[0].sku)
     }
@@ -264,6 +265,17 @@ if (pageName === page_sku) {
             pagination: false,
             arrows: false,
             cover: true,
+            breakpoints: {
+                1200: {
+                    heightRatio: 0.57,
+                },
+                991: {
+                    heightRatio: 0.478,
+                },
+                767: {
+                    heightRatio: 0.63,
+                }
+            }
         });
 
         var thumbnails = new Splide('#thumbnail-slider', {
@@ -283,10 +295,15 @@ if (pageName === page_sku) {
                 touch: 10,
             },
             breakpoints: {
-                640: {
-                    fixedWidth: 66,
-                    fixedHeight: 38,
+                1400: {
+                    height: '240px',
                 },
+                991: {
+                    height: '240px'
+                },
+                991: {
+                    height: '178px'
+                }
             },
         });
 
@@ -297,11 +314,81 @@ if (pageName === page_sku) {
     });
 
     // 4. script for activation Select menu
-    NiceSelect.bind(document.getElementById("origin"), { searchable: true });
-    NiceSelect.bind(document.getElementById("month"), { searchable: true });
-    NiceSelect.bind(document.getElementById("departure_date"), { searchable: true });
-    NiceSelect.bind(document.getElementById("number_of_day"));
-    NiceSelect.bind(document.getElementById("number_of_package"));
+    NiceSelect.bind(origin, { searchable: true });
+    NiceSelect.bind(month, { searchable: true });
+    NiceSelect.bind(departureDate, { searchable: true });
+    NiceSelect.bind(numberOfStay);
+    NiceSelect.bind(numberOfPackage);
+
+    // 5. Getting all the user input values
+    let userInputs = {
+        origin: origin.value,
+        month: month.value,
+        departureDate: departureDate.value,
+        numberOfStay: numberOfStay.value,
+        numberOfPackage: numberOfPackage.value
+    }
+
+    // 6. Adding event to every selection field 
+    let allSelectField = [origin, month, departureDate, numberOfStay, numberOfPackage];
+    allSelectField.forEach(each => {
+        each.addEventListener('change', getUserInput);
+    })
+
+    function getUserInput(event) {
+        userInputs = {
+            origin: this.value,
+            month: this.value,
+            departureDate: this.value,
+            numberOfStay: this.value,
+            numberOfPackage: this.value
+        }
+
+    }
+
+
+
+
+    // 6. Put it in the LocalStorage
+    localStorage.setItem('userInputs', JSON.stringify(userInputs));
+
+}
+
+
+
+if (pageName === page_confirmation) {
+    const confirmationPage = document.getElementById('confirmation');
+
+    // 1. Get the userInput data 
+    let userInputData = JSON.parse(localStorage.getItem('userInputs'));
+
+    console.log(userInputData)
+    // 2. Render the data 
+    let html = `<div class="top-part">
+    <div class="h-thumb"><img src="assets/img/h-1.webp" alt=""></div>
+    <h5 class="hotel-name">Jijoca de Jericoacoara, Ceará</h5>
+    <div class="included-facilites d-block d-md-flex flex-wrap align-items-center justify-content-center">
+        <p>Está incluso:</p>
+        <ul class="facilites d-block d-md-flex flex-wrap align-items-center">
+            <li><img src="assets/img/airplane.svg" alt="">Voo (ida e volta)</li>
+            <li><img src="assets/img/accomodation.svg" alt="">Hospedagem</li>
+            <li><img src="assets/img/breakfast.svg" alt="">Café da manhã</li>
+        </ul>
+    </div>
+    <div class="reservation-details d-flex justify-content-center flex-wrap">
+        <p>Origem:<strong>${userInputData.origin}</strong></p>
+        <p>Mês da viagem:<strong>${userInputData.month}/${new Date().getFullYear()}</strong></p>
+        <p>Data de partida:<strong>${userInputData.departureDate}</strong></p>
+        <p>Diárias:<strong>${userInputData.numberOfStay}</strong></p>
+        <p>Pacotes:<strong>${userInputData.numberOfPackage}</strong></p>
+    </div>
+    <h3 class="price-blk type-2 final text-center">
+        R$ <span class="pkg-price d-inline-block">200</span>
+    </h3>
+    <p class="payment-terms-text type-2 text-center">em <span>12x R$ 105 sem juros</span></p>
+</div>`
+    confirmationPage.innerHTML = html;
+
 }
 
 

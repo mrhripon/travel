@@ -174,16 +174,16 @@
                             <div class="filter-type type-2 border-0 h-auto">
                                 <p>Origem</p>
                                 <select name="" id="origin" class="selection">
-                                    <option value="place_1" selected>São Paulo</option>
-                                    <option value="place_2">Belo Horizonte</option>
-                                    <option value="place_3">Brasilia</option>
-                                    <option value="place_4">Curitiba</option>
-                                    <option value="place_5">Goiania</option>
-                                    <option value="place_6">Manaus</option>
-                                    <option value="place_7">Porto Alegre</option>
-                                    <option value="place_8">Recife</option>
-                                    <option value="place_9">Rio de Janeiro</option>
-                                    <option value="place_10">Salvador</option>
+                                    <option value="São Paulo" selected>São Paulo</option>
+                                    <option value="Belo Horizonte">Belo Horizonte</option>
+                                    <option value="Brasilia">Brasilia</option>
+                                    <option value="Curitiba">Curitiba</option>
+                                    <option value="Goiania">Goiania</option>
+                                    <option value="Manaus">Manaus</option>
+                                    <option value="Porto Alegre">Porto Alegre</option>
+                                    <option value="Recife">Recife</option>
+                                    <option value="Rio de Janeiro">Rio de Janeiro</option>
+                                    <option value="Salvador">Salvador</option>
                                 </select>
                             </div>
                             <div class="filter-type type-2 border-0 h-auto">
@@ -206,37 +206,37 @@
                             <div class="filter-type type-2 border-0 h-auto">
                                 <p>Data de partida</p>
                                 <select name="" id="departure_date" class="selection">
-                                    <option value="place_1" selected>Dia 1</option>
-                                    <option value="place_2">Dia 1</option>
-                                    <option value="place_2">Dia 2</option>
-                                    <option value="place_2">Dia 3</option>
-                                    <option value="place_2">Dia 4</option>
-                                    <option value="place_2">Dia 5</option>
-                                    <option value="place_2">Dia 6</option>
-                                    <option value="place_2">Dia 7</option>
-                                    <option value="place_2">Dia 8</option>
-                                    <option value="place_2">Dia 9</option>
-                                    <option value="place_2">Dia 10</option>
-                                    <option value="place_2">Dia 11</option>
-                                    <option value="place_2">Dia 12</option>
-                                    <option value="place_2">Dia 13</option>
-                                    <option value="place_2">Dia 14</option>
-                                    <option value="place_2">Dia 15</option>
-                                    <option value="place_2">Dia 16</option>
-                                    <option value="place_2">Dia 17</option>
-                                    <option value="place_2">Dia 19</option>
-                                    <option value="place_2">Dia 20</option>
-                                    <option value="place_2">Dia 21</option>
-                                    <option value="place_2">Dia 22</option>
-                                    <option value="place_2">Dia 23</option>
-                                    <option value="place_2">Dia 24</option>
-                                    <option value="place_2">Dia 25</option>
-                                    <option value="place_2">Dia 26</option>
-                                    <option value="place_2">Dia 27</option>
-                                    <option value="place_2">Dia 28</option>
-                                    <option value="place_2">Dia 29</option>
-                                    <option value="place_2">Dia 30</option>
-                                    <option value="place_2">Dia 31</option>
+                                    <option value="Dia 1" selected>Dia 1</option>
+                                    <option value="Dia 2">Dia 2</option>
+                                    <option value="Dia 3">Dia 3</option>
+                                    <option value="Dia 4">Dia 4</option>
+                                    <option value="Dia 5">Dia 5</option>
+                                    <option value="Dia 6">Dia 6</option>
+                                    <option value="Dia 7">Dia 7</option>
+                                    <option value="Dia 8">Dia 8</option>
+                                    <option value="Dia 9">Dia 9</option>
+                                    <option value="Dia 10">Dia 10</option>
+                                    <option value="Dia 11">Dia 11</option>
+                                    <option value="Dia 12">Dia 12</option>
+                                    <option value="Dia 13">Dia 13</option>
+                                    <option value="Dia 14">Dia 14</option>
+                                    <option value="Dia 15">Dia 15</option>
+                                    <option value="Dia 16">Dia 16</option>
+                                    <option value="Dia 17">Dia 17</option>
+                                    <option value="Dia 18">Dia 18</option>
+                                    <option value="Dia 19">Dia 19</option>
+                                    <option value="Dia 20">Dia 20</option>
+                                    <option value="Dia 21">Dia 21</option>
+                                    <option value="Dia 22">Dia 22</option>
+                                    <option value="Dia 23">Dia 23</option>
+                                    <option value="Dia 24">Dia 24</option>
+                                    <option value="Dia 25">Dia 25</option>
+                                    <option value="Dia 26">Dia 26</option>
+                                    <option value="Dia 27">Dia 27</option>
+                                    <option value="Dia 28">Dia 28</option>
+                                    <option value="Dia 29">Dia 29</option>
+                                    <option value="Dia 30">Dia 30</option>
+                                    <option value="Dia 31">Dia 31</option>
                                 </select>
                             </div>
                             <div class="filter-type type-2 border-0 h-auto">
@@ -265,7 +265,9 @@
                         </div>
                         <div class="total-cost-wrapper d-flex align-items-center justify-content-center">
                             <h3 class="price-blk type-2 mb-0">
-                                R$ <span class="pkg-price d-inline-block">200</span>
+                                R$ <span class="pkg-price d-inline-block" id="pkg-price">
+                                    <!-- 200  -->
+                                </span>
                             </h3>
 
                             <p class="payment-terms-text">Pague em até <span>12x sem juros</span> <br>

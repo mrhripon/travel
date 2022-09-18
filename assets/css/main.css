@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* Base Css Start  */
 /* Custom Fonts Linking  */
 @font-face {
@@ -84,12 +91,14 @@ a:hover {
 button:focus,
 button:active {
   outline: none;
+  -webkit-box-shadow: none !important;
   box-shadow: none !important;
 }
 
 .btn-check:focus+.btn,
 .btn:focus {
   outline: 0;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
@@ -139,6 +148,10 @@ ol {
   text-align: center;
 }
 
+.btn.box-btn.indigo-bg {
+  background: #00BCFF;
+}
+
 /* common css end */
 
 /* page loader css start  */
@@ -169,11 +182,13 @@ ol {
 
 @keyframes loader3 {
   0% {
+    -webkit-transform: scale(0, 0);
     transform: scale(0, 0);
     opacity: 0.8;
   }
 
   100% {
+    -webkit-transform: scale(1, 1);
     transform: scale(1, 1);
     opacity: 0;
   }
@@ -201,8 +216,14 @@ ol {
   z-index: 99999;
   height: 100vh;
   width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -227,6 +248,8 @@ ol {
 .splide__arrow {
   position: absolute;
   top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   z-index: 1;
   background-color: #fff;
@@ -234,8 +257,11 @@ ol {
   height: 64px;
   border: 0;
   border-radius: 50%;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
   transition: .3s;
   cursor: pointer;
+  -webkit-box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
   opacity: 1;
   overflow: hidden;
@@ -249,6 +275,8 @@ ol {
   position: absolute;
   top: 0;
   bottom: 0;
+  -webkit-transition: .4s;
+  -o-transition: .4s;
   transition: .4s;
 }
 
@@ -282,6 +310,8 @@ ol {
   fill: #3483FA;
   height: 1em;
   width: 1em;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
   transition: .3s;
   position: relative;
   z-index: 1;
@@ -390,10 +420,17 @@ ol {
 
 .package-thumb {
   height: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   overflow: hidden;
+  background: rgba(52, 131, 250, 0.28);
 }
 
 .bg-green {
@@ -415,6 +452,8 @@ ol {
 .filter-type.diar p,
 .filter-type.pac p {
   top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   left: 24px;
   z-index: 1;
@@ -477,6 +516,8 @@ ol {
   color: #333333;
   font-size: 15px;
   text-decoration: none;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
   transition: .3s;
 }
 
@@ -502,6 +543,8 @@ ol {
   width: 192px;
   height: 24px;
   border-radius: 5px 5px 0 0;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   top: -24px;
   z-index: 1;
@@ -551,6 +594,7 @@ ol {
 
 .sku-wrapper {
   padding: 40px;
+  -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.15);
 }
 
@@ -561,6 +605,7 @@ ol {
 .product-box {
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 54px 15px auto;
   grid-template-columns: 54px auto;
   grid-gap: 15px;
 }
@@ -590,6 +635,7 @@ ol {
 }
 
 .accordion-button::after {
+  -ms-flex-negative: 0;
   flex-shrink: 0;
   width: 15px;
   height: 15px;
@@ -598,7 +644,11 @@ ol {
   background-image: url("../img/down-arw.svg") !important;
   background-repeat: no-repeat;
   background-size: 14px;
+  -webkit-transition: -webkit-transform .2s ease-in-out;
+  transition: -webkit-transform .2s ease-in-out;
+  -o-transition: transform .2s ease-in-out;
   transition: transform .2s ease-in-out;
+  transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
 }
 
 .accordion-item {
@@ -664,12 +714,17 @@ ol {
 }
 
 .hotels-list>li {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 250px 15px auto;
   grid-template-columns: 250px auto;
   grid-gap: 15px;
+  -webkit-box-shadow: 0px -1px 2px rgba(0, 0, 0, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.1);
   box-shadow: 0px -1px 2px rgba(0, 0, 0, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   overflow: hidden;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -708,6 +763,8 @@ ol {
 
 .modal-header .btn-close {
   top: 60%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   right: 15px;
   opacity: 1;
@@ -779,9 +836,13 @@ ol {
 }
 
 .filter-wrapper.type-2 {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 40px 1fr 40px 1fr 40px 1fr 40px 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 40px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-top: 40px;
   margin-bottom: 24px;
@@ -804,6 +865,7 @@ ol {
   max-width: 728px;
   margin-left: auto;
   margin-right: auto;
+  -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.15);
   padding: 40px;
 }
@@ -882,8 +944,14 @@ ol {
 
 .price-blk.type-2.final {
   font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -940,3 +1008,197 @@ ol {
 }
 
 /* --- confirmation page css end */
+
+
+
+
+@media screen and (max-width: 1400px) {
+  .package-thumb {
+    height: auto;
+    max-height: 165px;
+  }
+}
+
+
+@media screen and (max-width: 1199px) {
+  .package-thumb {
+    max-height: 175px;
+  }
+
+  .total-wrapper {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .package-thumb {
+    max-height: 200px;
+  }
+
+  .product-box {
+    margin-bottom: 24px;
+  }
+
+  .filter-wrapper.type-2 {
+    grid-gap: 20px;
+  }
+
+  .single-step p {
+    margin-top: 10px;
+  }
+
+  .single-step {
+    margin-bottom: 30px;
+  }
+
+  .step-area {
+    padding-bottom: 0;
+    padding-top: 20px;
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+  .package-thumb {
+    max-height: 100%;
+    height: 25vw;
+  }
+
+  .primary-title {
+    font-size: 28px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  .secondary-title {
+    font-size: 22px;
+  }
+
+  .filter-wrapper .filter-type {
+    height: 44px;
+    margin-bottom: 10px;
+    margin-right: 0 !important;
+  }
+
+  .filter-wrapper .nice-select {
+    height: 42px;
+    line-height: 44px;
+    width: 100%;
+  }
+
+  .filter-wrapper {
+    background-color: #FFFFFF;
+    padding: 30px 15px;
+    margin-bottom: 35px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .travel-img {
+    margin-bottom: 24px;
+  }
+
+  .travel-place-area {
+    padding-top: 45px;
+  }
+
+  .package-area {
+    padding-top: 35px;
+    padding-bottom: 50px;
+  }
+
+  .filter-wrapper.type-2 {
+    grid-gap: 5px;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .sku-wrapper {
+    padding: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none
+  }
+
+  .package-content.plc-2 {
+    text-align: center;
+    padding: 15px;
+  }
+
+  .more-hotels button {
+    width: 100%;
+  }
+
+  .sku-area {
+    background: #fff;
+  }
+
+  .total-cost-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-top: 34px;
+  }
+
+  .total-cost-wrapper .box-btn {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .step-area {
+    padding-bottom: 0;
+    padding-top: 34px;
+  }
+
+  .single-step {
+    margin-bottom: 24px;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about-content p {
+    font-size: 16px;
+  }
+
+  .faq-area {
+    padding: 40px 0;
+    padding-bottom: 65px;
+  }
+
+  .included-facilites ul li:not(:last-child)::after {
+    content: none;
+  }
+
+  .included-facilites ul li:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+
+  .included-facilites p {
+    margin-right: 0;
+    margin-bottom: 4px;
+  }
+
+  .confirmation-outer-wrap {
+    max-width: 728px;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .confirmation-area {
+    background: #fff;
+    padding: 40px 0;
+    padding-bottom: 50px;
+  }
+
+  .twin-btn-wrap button {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+}
