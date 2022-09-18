@@ -7,7 +7,7 @@
                 "discount": "30",
                 "package_thumb": "https://i.ibb.co/jLF3rPz/place-2.png",
                 "place_name": "Jericoacara",
-                "price": "200",
+                "price": "250",
                 "departure_id": "place_1",
                 "sku": {
                     "skuImg": [
@@ -20,7 +20,16 @@
                         "assets/img/place-5.png",
                         "assets/img/place-5.png"
                     ],
-                    "skuData": ""
+                    "skuData": [
+                        {
+                            "hotelName": "Pousada Capitão Thomaz",
+                            "hotelImg": "assets/img/place-1.png"
+                        },
+                        {
+                            "hotelName": "Hotel Jeri",
+                            "hotelImg": "assets/img/place-2.png"
+                        }
+                    ]
                 }
             },
             {
@@ -71,7 +80,16 @@
                         "assets/img/place-19.png",
                         "assets/img/place-20.png"
                     ],
-                    "skuData": ""
+                    "skuData": [
+                        {
+                            "hotelName": "Pousada Capitão Thomaz",
+                            "hotelImg": "assets/img/place-1.png"
+                        },
+                        {
+                            "hotelName": "Hotel Jeri",
+                            "hotelImg": "assets/img/place-2.png"
+                        }
+                    ]
                 }
             },
             {
@@ -88,7 +106,16 @@
                         "assets/img/place-4.png",
                         "assets/img/place-5.png"
                     ],
-                    "skuData": ""
+                    "skuData": [
+                        {
+                            "hotelName": "Pousada Capitão Thomaz",
+                            "hotelImg": "assets/img/place-1.png"
+                        },
+                        {
+                            "hotelName": "Hotel Jeri",
+                            "hotelImg": "assets/img/place-2.png"
+                        }
+                    ]
                 }
             },
             {
@@ -105,7 +132,16 @@
                         "assets/img/place-9.png",
                         "assets/img/place-10.png"
                     ],
-                    "skuData": ""
+                    "skuData": [
+                        {
+                            "hotelName": "Pousada Capitão Thomaz",
+                            "hotelImg": "assets/img/place-1.png"
+                        },
+                        {
+                            "hotelName": "Hotel Jeri",
+                            "hotelImg": "assets/img/place-2.png"
+                        }
+                    ]
                 }
             },
             {
@@ -122,7 +158,16 @@
                         "assets/img/place-14.png",
                         "assets/img/place-15.png"
                     ],
-                    "skuData": ""
+                    "skuData": [
+                        {
+                            "hotelName": "Pousada Capitão Thomaz",
+                            "hotelImg": "assets/img/place-1.png"
+                        },
+                        {
+                            "hotelName": "Hotel Jeri",
+                            "hotelImg": "assets/img/place-2.png"
+                        }
+                    ]
                 }
             },
             {
@@ -139,7 +184,16 @@
                         "assets/img/place-19.png",
                         "assets/img/place-20.png"
                     ],
-                    "skuData": ""
+                    "skuData": [
+                        {
+                            "hotelName": "Pousada Capitão Thomaz",
+                            "hotelImg": "assets/img/place-1.png"
+                        },
+                        {
+                            "hotelName": "Hotel Jeri",
+                            "hotelImg": "assets/img/place-2.png"
+                        }
+                    ]
                 }
             },
             {
@@ -156,7 +210,16 @@
                         "assets/img/place-4.png",
                         "assets/img/place-5.png"
                     ],
-                    "skuData": ""
+                    "skuData": [
+                        {
+                            "hotelName": "Pousada Capitão Thomaz",
+                            "hotelImg": "assets/img/place-1.png"
+                        },
+                        {
+                            "hotelName": "Hotel Jeri",
+                            "hotelImg": "assets/img/place-2.png"
+                        }
+                    ]
                 }
             },
             {
@@ -173,7 +236,16 @@
                         "assets/img/place-9.png",
                         "assets/img/place-10.png"
                     ],
-                    "skuData": ""
+                    "skuData": [
+                        {
+                            "hotelName": "Pousada Capitão Thomaz",
+                            "hotelImg": "assets/img/place-1.png"
+                        },
+                        {
+                            "hotelName": "Hotel Jeri",
+                            "hotelImg": "assets/img/place-2.png"
+                        }
+                    ]
                 }
             },
             {
@@ -190,7 +262,16 @@
                         "assets/img/place-14.png",
                         "assets/img/place-15.png"
                     ],
-                    "skuData": ""
+                    "skuData": [
+                        {
+                            "hotelName": "Pousada Capitão Thomaz",
+                            "hotelImg": "assets/img/place-1.png"
+                        },
+                        {
+                            "hotelName": "Hotel Jeri",
+                            "hotelImg": "assets/img/place-2.png"
+                        }
+                    ]
                 }
             },
             {
@@ -207,7 +288,16 @@
                         "assets/img/place-19.png",
                         "assets/img/place-20.png"
                     ],
-                    "skuData": ""
+                    "skuData": [
+                        {
+                            "hotelName": "Pousada Capitão Thomaz",
+                            "hotelImg": "assets/img/place-1.png"
+                        },
+                        {
+                            "hotelName": "Hotel Jeri",
+                            "hotelImg": "assets/img/place-2.png"
+                        }
+                    ]
                 }
             }
         ]
@@ -230,7 +320,12 @@
                         "assets/img/place-4.png",
                         "assets/img/place-5.png"
                     ],
-                    "skuData": ""
+                    "skuData": [
+                        {
+                            "hotelName": "Pousada Capitão Thomaz",
+                            "hotelImg": "assets/img/place-1.png"
+                        }
+                    ]
                 }
             },
             {
@@ -247,7 +342,16 @@
                         "assets/img/place-9.png",
                         "assets/img/place-10.png"
                     ],
-                    "skuData": ""
+                    "skuData": [
+                        {
+                            "hotelName": "Pousada Capitão Thomaz",
+                            "hotelImg": "assets/img/place-1.png"
+                        },
+                        {
+                            "hotelName": "Hotel Jeri",
+                            "hotelImg": "assets/img/place-2.png"
+                        }
+                    ]
                 }
             },
             {
@@ -264,7 +368,16 @@
                         "assets/img/place-14.png",
                         "assets/img/place-15.png"
                     ],
-                    "skuData": ""
+                    "skuData": [
+                        {
+                            "hotelName": "Pousada Capitão Thomaz",
+                            "hotelImg": "assets/img/place-1.png"
+                        },
+                        {
+                            "hotelName": "Hotel Jeri",
+                            "hotelImg": "assets/img/place-2.png"
+                        }
+                    ]
                 }
             },
             {
@@ -281,7 +394,16 @@
                         "assets/img/place-19.png",
                         "assets/img/place-20.png"
                     ],
-                    "skuData": ""
+                    "skuData": [
+                        {
+                            "hotelName": "Pousada Capitão Thomaz",
+                            "hotelImg": "assets/img/place-1.png"
+                        },
+                        {
+                            "hotelName": "Hotel Jeri",
+                            "hotelImg": "assets/img/place-2.png"
+                        }
+                    ]
                 }
             },
             {
@@ -298,7 +420,16 @@
                         "assets/img/place-4.png",
                         "assets/img/place-5.png"
                     ],
-                    "skuData": ""
+                    "skuData": [
+                        {
+                            "hotelName": "Pousada Capitão Thomaz",
+                            "hotelImg": "assets/img/place-1.png"
+                        },
+                        {
+                            "hotelName": "Hotel Jeri",
+                            "hotelImg": "assets/img/place-2.png"
+                        }
+                    ]
                 }
             },
             {
@@ -315,7 +446,16 @@
                         "assets/img/place-9.png",
                         "assets/img/place-10.png"
                     ],
-                    "skuData": ""
+                    "skuData": [
+                        {
+                            "hotelName": "Pousada Capitão Thomaz",
+                            "hotelImg": "assets/img/place-1.png"
+                        },
+                        {
+                            "hotelName": "Hotel Jeri",
+                            "hotelImg": "assets/img/place-2.png"
+                        }
+                    ]
                 }
             },
             {

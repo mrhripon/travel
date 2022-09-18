@@ -1201,4 +1201,30 @@ ol {
     width: 100%;
     margin-bottom: 5px;
   }
+
+  .hotels-list>li {
+    grid-template-columns: 130px auto;
+  }
+
+  .hotel-thumb {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hotel-list-content {
+    padding: 15px;
+    padding-left: 0;
+  }
+
+  .hotel-list-content h4 {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+  .modal-header h5 {
+    font-size: 18px;
+    padding-right: 20px;
+  }
+
+
 }
