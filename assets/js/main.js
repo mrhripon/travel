@@ -75,7 +75,6 @@ if (pageName === page_home || pageName === page_viewAll) {
 
 // Function For Render Packages in Home page 
 async function renderHome(data, query) {
-    console.log('home page alert')
     let html = '';
     await data.forEach((el, index) => {
         html += `<div class="pkg-rw">
@@ -83,8 +82,8 @@ async function renderHome(data, query) {
         <div class="row packages-wrap">
         ${(() => {
                 let innerHtml = '', dataFiltered;
-                dataFiltered = el.products.filter(item => {
-                    return item.departure_id == query;
+                dataFiltered = el.travel_places.filter(item => {
+                    return item.departure_place == query;
                 })
 
                 if (dataFiltered.length == 0) {
@@ -97,15 +96,24 @@ async function renderHome(data, query) {
                     <div class="package-card-inner">
                         <div class="package-thumb position-relative">
                             <img src="${dataFiltered[i].package_thumb}" alt="" class="img-fluid w-100">
-                            <span class="badge bg-green position-absolute">Nacional</span>
+                            ${(() => {
+                            if (dataFiltered[i].travel_type == 'National') {
+                                return `<span class="badge bg-green position-absolute">${dataFiltered[i].travel_type}</span>`;
+                            }
+
+                            if (dataFiltered[i].travel_type == 'International') {
+                                return `<span class="badge bg-indigo position-absolute">${dataFiltered[i].travel_type}</span>`;
+                            }
+
+                        })()
+                        }
                         </div>
                         <div class="package-content">
                             <h4 class="place-name">${dataFiltered[i].place_name}</h4>
                             <h3 class="price-blk">
                                 <span class="from d-block">A partir de</span>
-                                R$ <span class="pkg-price d-inline-block">${dataFiltered[i].price}</span>
+                                R$ <span class="pkg-price d-inline-block">${dataFiltered[i].package_cost.three_day}</span>
                             </h3>
-        
                             <ul class="facilites">
                                 <li><img src="assets/img/airplane.svg" alt="">Voo (ida e volta)</li>
                                 <li><img src="assets/img/accomodation.svg" alt="">Hospedagem</li>
@@ -122,7 +130,6 @@ async function renderHome(data, query) {
     </div>`
     });
     homePackages.innerHTML = html;
-    console.log('content-loaded')
     addEventToPackages();
 }
 
@@ -135,15 +142,13 @@ function renderViewAll(data, query) {
                 let innerHtml = '', dataFiltered;
 
                 if (query) {
-                    dataFiltered = data[index].products.filter(item => {
-                        return item.departure_id == query;
+                    dataFiltered = data[index].travel_places.filter(item => {
+                        return item.departure_place == query;
                     })
 
                 } else {
-                    dataFiltered = data[index].products;
+                    dataFiltered = data[index].travel_places;
                 }
-                console.log(dataFiltered)
-
                 for (let i = 0; i < dataFiltered.length; i++) {
                     innerHtml += `<div class="col-xl-3 col-lg-4 col-6 mb-4"><a href="sku.html" class="package-card d-block">
                 <div class="package-card-inner">
@@ -186,7 +191,6 @@ if (pageName === page_viewAll) {
     departurePlace = document.getElementById('departure_place');
     departurePlace.addEventListener('change', function (event) {
         event.preventDefault();
-        // console.log(this.value)
         renderViewAll(data, this.value);
     })
 
@@ -194,7 +198,6 @@ if (pageName === page_viewAll) {
 
 
 function addEventToPackages() {
-    console.log('add event')
     let totalPackage = document.querySelectorAll('.package-card');
     totalPackage.forEach(each => {
         each.addEventListener('click', function (event) {
@@ -221,8 +224,7 @@ if (pageName === page_sku) {
         const data = JSON.parse(localStorage.getItem('data'));
         let skuArray = [];
         data.forEach((el) => {
-            console.log(el.products)
-            skuArray = [...skuArray, ...el.products];
+            skuArray = [...skuArray, ...el.travel_places];
         })
         let desiredSku = skuArray.filter(each => {
             return each.id == skuId;
@@ -238,7 +240,7 @@ if (pageName === page_sku) {
         const mainSlider = document.getElementById('main-slider');
         const mainSlContent = mainSlider.querySelector('.splide__list');
         const placeName = document.getElementById('place-name');
-        data[0].sku.skuImg.forEach(each => {
+        data[0].package_details.relatedPlace_images.forEach(each => {
             html += `<li class="splide__slide">
             <div class="thumb-slide border_radius_4 overflow-hidden">
                 <img class="img-fluid w-100" src="${each}" alt="">
@@ -248,15 +250,15 @@ if (pageName === page_sku) {
         thumbSlContent.innerHTML = html;
         mainSlContent.innerHTML = html;
         placeName.innerHTML = data[0].place_name;
-        pkgPrice.innerHTML = data[0].price;
-        if (data[0].sku.skuData) {
-            data[0].sku.skuData.forEach(each => {
+        pkgPrice.innerHTML = getPackagePrice(data);
+        if (data[0].package_details.related_hotels) {
+            data[0].package_details.related_hotels.forEach(each => {
                 html2 += ` <li>
                 <div class="hotel-thumb">
-                    <img src="${each.hotelImg}" alt="" class="img-fluid w-100">
+                    <img src="${each.hotel_thumb}" alt="" class="img-fluid w-100">
                 </div>
                 <div class="hotel-list-content">
-                    <h4 class="text-center">${each.hotelName}</h4>
+                    <h4 class="text-center">${each.hotel_name}</h4>
                     <ul class="facilites">
                         <li><img src="assets/img/calendar.svg" alt="">3 a 7 diárias</li>
                         <li><img src="assets/img/breakfast.svg" alt="">Café da manhã</li>
@@ -342,9 +344,27 @@ if (pageName === page_sku) {
     NiceSelect.bind(numberOfStay);
     NiceSelect.bind(numberOfPackage);
 
-    // 5. Calculate total cost 
-    let totalCost = parseInt(numberOfPackage.value) * parseInt(numberOfStay.value) * parseInt(skuData[0].price)
-    // 6. Getting all the user input values
+    function getPackagePrice(skuData) {
+        let cost;
+        if (parseInt(numberOfStay.value) == 3) {
+            cost = skuData[0].package_cost.three_day;
+        }
+        if (parseInt(numberOfStay.value) == 5) {
+            cost = skuData[0].package_cost.five_day;
+        }
+        if (parseInt(numberOfStay.value) == 7) {
+            cost = skuData[0].package_cost.seven_day;
+        }
+
+        return cost;
+    }
+
+    function getTotal() {
+        return parseInt(numberOfPackage.value) * parseInt(getPackagePrice(skuData));
+    }
+
+
+    // 5. Getting all the user input values
     let userInputs = {
         origin: origin.value,
         month: month.value,
@@ -353,13 +373,13 @@ if (pageName === page_sku) {
         numberOfPackage: numberOfPackage.value,
         placeName: skuData[0].place_name,
         placeImg: skuData[0].package_thumb,
-        totalPrice: totalCost
+        totalPrice: getTotal()
 
     }
 
 
 
-    // 7. Adding event to every selection field 
+    // 6. Adding event to every selection field 
     let allSelectField = [origin, month, departureDate, numberOfStay, numberOfPackage];
     allSelectField.forEach(each => {
         each.addEventListener('change', getUserInput);
@@ -367,23 +387,25 @@ if (pageName === page_sku) {
 
     function getUserInput(event) {
         userInputs = {
-            origin: this.value,
-            month: this.value,
-            departureDate: this.value,
-            numberOfStay: this.value,
-            numberOfPackage: this.value,
+            origin: origin.value,
+            month: month.value,
+            departureDate: departureDate.value,
+            numberOfStay: numberOfStay.value,
+            numberOfPackage: numberOfPackage.value,
             placeName: skuData[0].place_name,
             placeImg: skuData[0].package_thumb,
-            totalPrice: parseInt(userInputs.numberOfPackage) * parseInt(userInputs.numberOfStay) * parseInt(skuData[0].price)
+            totalPrice: getTotal()
 
         }
+
+        pkgPrice.innerHTML = getTotal();
 
         // 6. Put it in the LocalStorage
         localStorage.setItem('userInputs', JSON.stringify(userInputs));
 
     }
 
-    // 6. Put it in the LocalStorage
+    // 7. Put it in the LocalStorage
     localStorage.setItem('userInputs', JSON.stringify(userInputs));
 
 }
@@ -395,8 +417,8 @@ if (pageName === page_confirmation) {
 
     // 1. Get the userInput data 
     let userInputData = JSON.parse(localStorage.getItem('userInputs'));
-
     console.log(userInputData)
+
     // 2. Render the data 
     let html = `<div class="top-part">
     <div class="h-thumb"><img src="${userInputData.placeImg}" alt=""></div>
@@ -422,6 +444,8 @@ if (pageName === page_confirmation) {
     <p class="payment-terms-text type-2 text-center">em <span>12x R$ 105 sem juros</span></p>
 </div>`
     confirmationPage.innerHTML = html;
+
+    // 3. Available Data for next Move 
 
 }
 

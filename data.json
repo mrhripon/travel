@@ -1,16 +1,25 @@
 [
     {
         "discount": "30",
-        "products": [
+        "travel_places": [
             {
                 "id": "pkg-1",
-                "discount": "30",
-                "package_thumb": "https://i.ibb.co/jLF3rPz/place-2.png",
+                "travel_type": "National",
                 "place_name": "Jericoacara",
-                "price": "250",
-                "departure_id": "place_1",
-                "sku": {
-                    "skuImg": [
+                "departure_place": "Belem",
+                "package_thumb": "https://i.ibb.co/jLF3rPz/place-2.png",
+                "package_include": {
+                    "flight": "Voo (ida e volta)",
+                    "accomodation": "Hospedagem",
+                    "breakfast": "Café da manhã"
+                },
+                "package_cost": {
+                    "three_day": 150,
+                    "five_day": 200,
+                    "seven_day": 300
+                },
+                "package_details": {
+                    "relatedPlace_images": [
                         "assets/img/h-1.webp",
                         "assets/img/h-2.webp",
                         "assets/img/h-3.webp",
@@ -20,282 +29,278 @@
                         "assets/img/place-5.png",
                         "assets/img/place-5.png"
                     ],
-                    "skuData": [
+                    "related_hotels": [
                         {
-                            "hotelName": "Pousada Capitão Thomaz",
-                            "hotelImg": "assets/img/place-1.png"
+                            "hotel_name": "Pousada Capitão Thomaz",
+                            "hotel_thumb": "assets/img/place-1.png"
                         },
                         {
-                            "hotelName": "Hotel Jeri",
-                            "hotelImg": "assets/img/place-2.png"
+                            "hotel_name": "Hotel Jeri",
+                            "hotel_thumb": "assets/img/place-2.png"
                         }
                     ]
                 }
             },
             {
                 "id": "pkg-2",
-                "package_thumb": "assets/img/place-2.png",
+                "travel_type": "International",
                 "place_name": "Rio de Janeiro",
-                "price": "200",
-                "departure_id": "place_1",
-                "sku": {
-                    "skuImg": [
-                        "assets/img/place-6.png",
-                        "assets/img/place-7.png",
-                        "assets/img/place-8.png",
-                        "assets/img/place-9.png",
-                        "assets/img/place-10.png"
+                "departure_place": "Belem",
+                "package_thumb": "https://i.ibb.co/jLF3rPz/place-2.png",
+                "package_include": {
+                    "flight": "Voo (ida e volta)",
+                    "accomodation": "Hospedagem",
+                    "breakfast": "Café da manhã"
+                },
+                "package_cost": {
+                    "three_day": 150,
+                    "five_day": 200,
+                    "seven_day": 300
+                },
+                "package_details": {
+                    "relatedPlace_images": [
+                        "assets/img/h-1.webp",
+                        "assets/img/h-2.webp",
+                        "assets/img/h-3.webp",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png"
                     ],
-                    "skuData": ""
+                    "related_hotels": ""
                 }
             },
             {
                 "id": "pkg-3",
-                "package_thumb": "assets/img/place-3.png",
+                "travel_type": "National",
                 "place_name": "São Paulo",
-                "price": "200",
-                "departure_id": "place_1",
-                "sku": {
-                    "skuImg": [
-                        "assets/img/place-11.png",
-                        "assets/img/place-12.png",
-                        "assets/img/place-13.png",
-                        "assets/img/place-14.png",
-                        "assets/img/place-15.png"
+                "departure_place": "Belem",
+                "package_thumb": "https://i.ibb.co/jLF3rPz/place-2.png",
+                "package_include": {
+                    "flight": "Voo (ida e volta)",
+                    "accomodation": "Hospedagem",
+                    "breakfast": "Café da manhã"
+                },
+                "package_cost": {
+                    "three_day": 150,
+                    "five_day": 200,
+                    "seven_day": 300
+                },
+                "package_details": {
+                    "relatedPlace_images": [
+                        "assets/img/h-1.webp",
+                        "assets/img/h-2.webp",
+                        "assets/img/h-3.webp",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png"
                     ],
-                    "skuData": ""
+                    "related_hotels": [
+                        {
+                            "hotel_name": "Pousada Capitão Thomaz",
+                            "hotel_thumb": "assets/img/place-1.png"
+                        },
+                        {
+                            "hotel_name": "Hotel Jeri",
+                            "hotel_thumb": "assets/img/place-2.png"
+                        }
+                    ]
                 }
             },
             {
                 "id": "pkg-4",
-                "package_thumb": "assets/img/place-4.png",
-                "place_name": "Fortaleza",
-                "price": "200",
-                "departure_id": "place_1",
-                "sku": {
-                    "skuImg": [
-                        "assets/img/place-16.png",
-                        "assets/img/place-17.png",
-                        "assets/img/place-18.png",
-                        "assets/img/place-19.png",
-                        "assets/img/place-20.png"
+                "travel_type": "National",
+                "place_name": "Jericoacara",
+                "departure_place": "Belem",
+                "package_thumb": "https://i.ibb.co/jLF3rPz/place-2.png",
+                "package_include": {
+                    "flight": "Voo (ida e volta)",
+                    "accomodation": "Hospedagem",
+                    "breakfast": "Café da manhã"
+                },
+                "package_cost": {
+                    "three_day": 150,
+                    "five_day": 200,
+                    "seven_day": 300
+                },
+                "package_details": {
+                    "relatedPlace_images": [
+                        "assets/img/h-1.webp",
+                        "assets/img/h-2.webp",
+                        "assets/img/h-3.webp",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png"
                     ],
-                    "skuData": [
+                    "related_hotels": [
                         {
-                            "hotelName": "Pousada Capitão Thomaz",
-                            "hotelImg": "assets/img/place-1.png"
+                            "hotel_name": "Pousada Capitão Thomaz",
+                            "hotel_thumb": "assets/img/place-1.png"
                         },
                         {
-                            "hotelName": "Hotel Jeri",
-                            "hotelImg": "assets/img/place-2.png"
+                            "hotel_name": "Hotel Jeri",
+                            "hotel_thumb": "assets/img/place-2.png"
                         }
                     ]
                 }
             },
             {
                 "id": "pkg-5",
-                "package_thumb": "assets/img/place-5.png",
-                "place_name": "Barcelona",
-                "price": "200",
-                "departure_id": "place_2",
-                "sku": {
-                    "skuImg": [
-                        "assets/img/place-1.png",
-                        "assets/img/place-2.png",
-                        "assets/img/place-3.png",
-                        "assets/img/place-4.png",
+                "travel_type": "National",
+                "place_name": "Jericoacara",
+                "departure_place": "Belem",
+                "package_thumb": "https://i.ibb.co/jLF3rPz/place-2.png",
+                "package_include": {
+                    "flight": "Voo (ida e volta)",
+                    "accomodation": "Hospedagem",
+                    "breakfast": "Café da manhã"
+                },
+                "package_cost": {
+                    "three_day": 150,
+                    "five_day": 200,
+                    "seven_day": 300
+                },
+                "package_details": {
+                    "relatedPlace_images": [
+                        "assets/img/h-1.webp",
+                        "assets/img/h-2.webp",
+                        "assets/img/h-3.webp",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
                         "assets/img/place-5.png"
                     ],
-                    "skuData": [
+                    "related_hotels": [
                         {
-                            "hotelName": "Pousada Capitão Thomaz",
-                            "hotelImg": "assets/img/place-1.png"
+                            "hotel_name": "Pousada Capitão Thomaz",
+                            "hotel_thumb": "assets/img/place-1.png"
                         },
                         {
-                            "hotelName": "Hotel Jeri",
-                            "hotelImg": "assets/img/place-2.png"
+                            "hotel_name": "Hotel Jeri",
+                            "hotel_thumb": "assets/img/place-2.png"
                         }
                     ]
                 }
             },
             {
                 "id": "pkg-6",
-                "package_thumb": "assets/img/place-6.png",
-                "place_name": "Gramado",
-                "price": "200",
-                "departure_id": "place_2",
-                "sku": {
-                    "skuImg": [
-                        "assets/img/place-6.png",
-                        "assets/img/place-7.png",
-                        "assets/img/place-8.png",
-                        "assets/img/place-9.png",
-                        "assets/img/place-10.png"
+                "travel_type": "National",
+                "place_name": "Jericoacara",
+                "departure_place": "Belem",
+                "package_thumb": "https://i.ibb.co/jLF3rPz/place-2.png",
+                "package_include": {
+                    "flight": "Voo (ida e volta)",
+                    "accomodation": "Hospedagem",
+                    "breakfast": "Café da manhã"
+                },
+                "package_cost": {
+                    "three_day": 150,
+                    "five_day": 200,
+                    "seven_day": 300
+                },
+                "package_details": {
+                    "relatedPlace_images": [
+                        "assets/img/h-1.webp",
+                        "assets/img/h-2.webp",
+                        "assets/img/h-3.webp",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png"
                     ],
-                    "skuData": [
+                    "related_hotels": [
                         {
-                            "hotelName": "Pousada Capitão Thomaz",
-                            "hotelImg": "assets/img/place-1.png"
+                            "hotel_name": "Pousada Capitão Thomaz",
+                            "hotel_thumb": "assets/img/place-1.png"
                         },
                         {
-                            "hotelName": "Hotel Jeri",
-                            "hotelImg": "assets/img/place-2.png"
+                            "hotel_name": "Hotel Jeri",
+                            "hotel_thumb": "assets/img/place-2.png"
                         }
                     ]
                 }
             },
             {
                 "id": "pkg-7",
-                "package_thumb": "assets/img/place-7.png",
-                "place_name": "Porto Alegre",
-                "price": "200",
-                "departure_id": "place_2",
-                "sku": {
-                    "skuImg": [
-                        "assets/img/place-11.png",
-                        "assets/img/place-12.png",
-                        "assets/img/place-13.png",
-                        "assets/img/place-14.png",
-                        "assets/img/place-15.png"
+                "travel_type": "National",
+                "place_name": "Jericoacara",
+                "departure_place": "Belem",
+                "package_thumb": "https://i.ibb.co/jLF3rPz/place-2.png",
+                "package_include": {
+                    "flight": "Voo (ida e volta)",
+                    "accomodation": "Hospedagem",
+                    "breakfast": "Café da manhã"
+                },
+                "package_cost": {
+                    "three_day": 150,
+                    "five_day": 200,
+                    "seven_day": 300
+                },
+                "package_details": {
+                    "relatedPlace_images": [
+                        "assets/img/h-1.webp",
+                        "assets/img/h-2.webp",
+                        "assets/img/h-3.webp",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png"
                     ],
-                    "skuData": [
+                    "related_hotels": [
                         {
-                            "hotelName": "Pousada Capitão Thomaz",
-                            "hotelImg": "assets/img/place-1.png"
+                            "hotel_name": "Pousada Capitão Thomaz",
+                            "hotel_thumb": "assets/img/place-1.png"
                         },
                         {
-                            "hotelName": "Hotel Jeri",
-                            "hotelImg": "assets/img/place-2.png"
+                            "hotel_name": "Hotel Jeri",
+                            "hotel_thumb": "assets/img/place-2.png"
                         }
                     ]
                 }
             },
             {
                 "id": "pkg-8",
-                "package_thumb": "assets/img/place-8.png",
-                "place_name": "Porto de Galinhas",
-                "price": "200",
-                "departure_id": "place_2",
-                "sku": {
-                    "skuImg": [
-                        "assets/img/place-16.png",
-                        "assets/img/place-17.png",
-                        "assets/img/place-18.png",
-                        "assets/img/place-19.png",
-                        "assets/img/place-20.png"
-                    ],
-                    "skuData": [
-                        {
-                            "hotelName": "Pousada Capitão Thomaz",
-                            "hotelImg": "assets/img/place-1.png"
-                        },
-                        {
-                            "hotelName": "Hotel Jeri",
-                            "hotelImg": "assets/img/place-2.png"
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "pkg-9",
-                "package_thumb": "assets/img/place-9.png",
-                "place_name": "Bogotá",
-                "price": "200",
-                "departure_id": "place_3",
-                "sku": {
-                    "skuImg": [
-                        "assets/img/place-1.png",
-                        "assets/img/place-2.png",
-                        "assets/img/place-3.png",
-                        "assets/img/place-4.png",
+                "travel_type": "National",
+                "place_name": "Jericoacara",
+                "departure_place": "Belem",
+                "package_thumb": "https://i.ibb.co/jLF3rPz/place-2.png",
+                "package_include": {
+                    "flight": "Voo (ida e volta)",
+                    "accomodation": "Hospedagem",
+                    "breakfast": "Café da manhã"
+                },
+                "package_cost": {
+                    "three_day": 150,
+                    "five_day": 200,
+                    "seven_day": 300
+                },
+                "package_details": {
+                    "relatedPlace_images": [
+                        "assets/img/h-1.webp",
+                        "assets/img/h-2.webp",
+                        "assets/img/h-3.webp",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
                         "assets/img/place-5.png"
                     ],
-                    "skuData": [
+                    "related_hotels": [
                         {
-                            "hotelName": "Pousada Capitão Thomaz",
-                            "hotelImg": "assets/img/place-1.png"
+                            "hotel_name": "Pousada Capitão Thomaz",
+                            "hotel_thumb": "assets/img/place-1.png"
                         },
                         {
-                            "hotelName": "Hotel Jeri",
-                            "hotelImg": "assets/img/place-2.png"
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "pkg-10",
-                "package_thumb": "assets/img/place-10.png",
-                "place_name": "Roma",
-                "price": "200",
-                "departure_id": "place_3",
-                "sku": {
-                    "skuImg": [
-                        "assets/img/place-6.png",
-                        "assets/img/place-7.png",
-                        "assets/img/place-8.png",
-                        "assets/img/place-9.png",
-                        "assets/img/place-10.png"
-                    ],
-                    "skuData": [
-                        {
-                            "hotelName": "Pousada Capitão Thomaz",
-                            "hotelImg": "assets/img/place-1.png"
-                        },
-                        {
-                            "hotelName": "Hotel Jeri",
-                            "hotelImg": "assets/img/place-2.png"
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "pkg-11",
-                "package_thumb": "assets/img/place-11.png",
-                "place_name": "Recife",
-                "price": "200",
-                "departure_id": "place_3",
-                "sku": {
-                    "skuImg": [
-                        "assets/img/place-11.png",
-                        "assets/img/place-12.png",
-                        "assets/img/place-13.png",
-                        "assets/img/place-14.png",
-                        "assets/img/place-15.png"
-                    ],
-                    "skuData": [
-                        {
-                            "hotelName": "Pousada Capitão Thomaz",
-                            "hotelImg": "assets/img/place-1.png"
-                        },
-                        {
-                            "hotelName": "Hotel Jeri",
-                            "hotelImg": "assets/img/place-2.png"
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "pkg-12",
-                "package_thumb": "assets/img/place-12.png",
-                "place_name": "Morro de São Paulo/Bahia",
-                "price": "200",
-                "departure_id": "place_3",
-                "sku": {
-                    "skuImg": [
-                        "assets/img/place-16.png",
-                        "assets/img/place-17.png",
-                        "assets/img/place-18.png",
-                        "assets/img/place-19.png",
-                        "assets/img/place-20.png"
-                    ],
-                    "skuData": [
-                        {
-                            "hotelName": "Pousada Capitão Thomaz",
-                            "hotelImg": "assets/img/place-1.png"
-                        },
-                        {
-                            "hotelName": "Hotel Jeri",
-                            "hotelImg": "assets/img/place-2.png"
+                            "hotel_name": "Hotel Jeri",
+                            "hotel_thumb": "assets/img/place-2.png"
                         }
                     ]
                 }
@@ -303,193 +308,318 @@
         ]
     },
     {
-        "discount": "pkg-13",
-        "products": [
+        "discount": "15",
+        "travel_places": [
             {
-                "id": "d_15-1",
-                "discount": "30",
-                "package_thumb": "assets/img/place-13.png",
-                "place_name": "Buenos Aires",
-                "price": "200",
-                "departure_id": "place_3",
-                "sku": {
-                    "skuImg": [
-                        "assets/img/place-1.png",
-                        "assets/img/place-2.png",
-                        "assets/img/place-3.png",
-                        "assets/img/place-4.png",
+                "id": "pkg-1",
+                "travel_type": "National",
+                "place_name": "Jericoacara",
+                "departure_place": "Belem",
+                "package_thumb": "https://i.ibb.co/jLF3rPz/place-2.png",
+                "package_include": {
+                    "flight": "Voo (ida e volta)",
+                    "accomodation": "Hospedagem",
+                    "breakfast": "Café da manhã"
+                },
+                "package_cost": {
+                    "three_day": 150,
+                    "five_day": 200,
+                    "seven_day": 300
+                },
+                "package_details": {
+                    "relatedPlace_images": [
+                        "assets/img/h-1.webp",
+                        "assets/img/h-2.webp",
+                        "assets/img/h-3.webp",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
                         "assets/img/place-5.png"
                     ],
-                    "skuData": [
+                    "related_hotels": [
                         {
-                            "hotelName": "Pousada Capitão Thomaz",
-                            "hotelImg": "assets/img/place-1.png"
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "pkg-14",
-                "package_thumb": "assets/img/place-14.png",
-                "place_name": "Salvador",
-                "price": "200",
-                "departure_id": "place_1",
-                "sku": {
-                    "skuImg": [
-                        "assets/img/place-6.png",
-                        "assets/img/place-7.png",
-                        "assets/img/place-8.png",
-                        "assets/img/place-9.png",
-                        "assets/img/place-10.png"
-                    ],
-                    "skuData": [
-                        {
-                            "hotelName": "Pousada Capitão Thomaz",
-                            "hotelImg": "assets/img/place-1.png"
+                            "hotel_name": "Pousada Capitão Thomaz",
+                            "hotel_thumb": "assets/img/place-1.png"
                         },
                         {
-                            "hotelName": "Hotel Jeri",
-                            "hotelImg": "assets/img/place-2.png"
+                            "hotel_name": "Hotel Jeri",
+                            "hotel_thumb": "assets/img/place-2.png"
                         }
                     ]
                 }
             },
             {
-                "id": "pkg-15",
-                "package_thumb": "assets/img/place-15.png",
-                "place_name": "Madrid",
-                "price": "200",
-                "departure_id": "place_1",
-                "sku": {
-                    "skuImg": [
-                        "assets/img/place-11.png",
-                        "assets/img/place-12.png",
-                        "assets/img/place-13.png",
-                        "assets/img/place-14.png",
-                        "assets/img/place-15.png"
-                    ],
-                    "skuData": [
-                        {
-                            "hotelName": "Pousada Capitão Thomaz",
-                            "hotelImg": "assets/img/place-1.png"
-                        },
-                        {
-                            "hotelName": "Hotel Jeri",
-                            "hotelImg": "assets/img/place-2.png"
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "pkg-16",
-                "package_thumb": "assets/img/place-16.png",
-                "place_name": "Nova Iorque",
-                "price": "200",
-                "departure_id": "place_1",
-                "sku": {
-                    "skuImg": [
-                        "assets/img/place-16.png",
-                        "assets/img/place-17.png",
-                        "assets/img/place-18.png",
-                        "assets/img/place-19.png",
-                        "assets/img/place-20.png"
-                    ],
-                    "skuData": [
-                        {
-                            "hotelName": "Pousada Capitão Thomaz",
-                            "hotelImg": "assets/img/place-1.png"
-                        },
-                        {
-                            "hotelName": "Hotel Jeri",
-                            "hotelImg": "assets/img/place-2.png"
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "pkg-17",
-                "package_thumb": "assets/img/place-17.png",
-                "place_name": "Maceió",
-                "price": "200",
-                "departure_id": "place_1",
-                "sku": {
-                    "skuImg": [
-                        "assets/img/place-1.png",
-                        "assets/img/place-2.png",
-                        "assets/img/place-3.png",
-                        "assets/img/place-4.png",
+                "id": "pkg-2",
+                "travel_type": "International",
+                "place_name": "Jericoacara",
+                "departure_place": "Belem",
+                "package_thumb": "https://i.ibb.co/jLF3rPz/place-2.png",
+                "package_include": {
+                    "flight": "Voo (ida e volta)",
+                    "accomodation": "Hospedagem",
+                    "breakfast": "Café da manhã"
+                },
+                "package_cost": {
+                    "three_day": 150,
+                    "five_day": 200,
+                    "seven_day": 300
+                },
+                "package_details": {
+                    "relatedPlace_images": [
+                        "assets/img/h-1.webp",
+                        "assets/img/h-2.webp",
+                        "assets/img/h-3.webp",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
                         "assets/img/place-5.png"
                     ],
-                    "skuData": [
+                    "related_hotels": [
                         {
-                            "hotelName": "Pousada Capitão Thomaz",
-                            "hotelImg": "assets/img/place-1.png"
+                            "hotel_name": "Pousada Capitão Thomaz",
+                            "hotel_thumb": "assets/img/place-1.png"
                         },
                         {
-                            "hotelName": "Hotel Jeri",
-                            "hotelImg": "assets/img/place-2.png"
+                            "hotel_name": "Hotel Jeri",
+                            "hotel_thumb": "assets/img/place-2.png"
                         }
                     ]
                 }
             },
             {
-                "id": "pkg-18",
-                "package_thumb": "assets/img/place-18.png",
-                "place_name": "Paris",
-                "price": "200",
-                "departure_id": "place_1",
-                "sku": {
-                    "skuImg": [
-                        "assets/img/place-6.png",
-                        "assets/img/place-7.png",
-                        "assets/img/place-8.png",
-                        "assets/img/place-9.png",
-                        "assets/img/place-10.png"
+                "id": "pkg-3",
+                "travel_type": "National",
+                "place_name": "Jericoacara",
+                "departure_place": "Belem",
+                "package_thumb": "https://i.ibb.co/jLF3rPz/place-2.png",
+                "package_include": {
+                    "flight": "Voo (ida e volta)",
+                    "accomodation": "Hospedagem",
+                    "breakfast": "Café da manhã"
+                },
+                "package_cost": {
+                    "three_day": 150,
+                    "five_day": 200,
+                    "seven_day": 300
+                },
+                "package_details": {
+                    "relatedPlace_images": [
+                        "assets/img/h-1.webp",
+                        "assets/img/h-2.webp",
+                        "assets/img/h-3.webp",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png"
                     ],
-                    "skuData": [
+                    "related_hotels": [
                         {
-                            "hotelName": "Pousada Capitão Thomaz",
-                            "hotelImg": "assets/img/place-1.png"
+                            "hotel_name": "Pousada Capitão Thomaz",
+                            "hotel_thumb": "assets/img/place-1.png"
                         },
                         {
-                            "hotelName": "Hotel Jeri",
-                            "hotelImg": "assets/img/place-2.png"
+                            "hotel_name": "Hotel Jeri",
+                            "hotel_thumb": "assets/img/place-2.png"
                         }
                     ]
                 }
             },
             {
-                "id": "pkg-19",
-                "package_thumb": "assets/img/place-19.png",
-                "place_name": "Maragogi",
-                "price": "200",
-                "departure_id": "place_1",
-                "sku": {
-                    "skuImg": [
-                        "assets/img/place-11.png",
-                        "assets/img/place-12.png",
-                        "assets/img/place-13.png",
-                        "assets/img/place-14.png",
-                        "assets/img/place-15.png"
+                "id": "pkg-4",
+                "travel_type": "National",
+                "place_name": "Jericoacara",
+                "departure_place": "Belem",
+                "package_thumb": "https://i.ibb.co/jLF3rPz/place-2.png",
+                "package_include": {
+                    "flight": "Voo (ida e volta)",
+                    "accomodation": "Hospedagem",
+                    "breakfast": "Café da manhã"
+                },
+                "package_cost": {
+                    "three_day": 150,
+                    "five_day": 200,
+                    "seven_day": 300
+                },
+                "package_details": {
+                    "relatedPlace_images": [
+                        "assets/img/h-1.webp",
+                        "assets/img/h-2.webp",
+                        "assets/img/h-3.webp",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png"
                     ],
-                    "skuData": ""
+                    "related_hotels": [
+                        {
+                            "hotel_name": "Pousada Capitão Thomaz",
+                            "hotel_thumb": "assets/img/place-1.png"
+                        },
+                        {
+                            "hotel_name": "Hotel Jeri",
+                            "hotel_thumb": "assets/img/place-2.png"
+                        }
+                    ]
                 }
             },
             {
-                "id": "pkg-20",
-                "package_thumb": "assets/img/place-20.png",
-                "place_name": "Lisboa",
-                "price": "200",
-                "departure_id": "place_1",
-                "sku": {
-                    "skuImg": [
-                        "assets/img/place-16.png",
-                        "assets/img/place-17.png",
-                        "assets/img/place-18.png",
-                        "assets/img/place-19.png",
-                        "assets/img/place-20.png"
+                "id": "pkg-5",
+                "travel_type": "National",
+                "place_name": "Jericoacara",
+                "departure_place": "Belem",
+                "package_thumb": "https://i.ibb.co/jLF3rPz/place-2.png",
+                "package_include": {
+                    "flight": "Voo (ida e volta)",
+                    "accomodation": "Hospedagem",
+                    "breakfast": "Café da manhã"
+                },
+                "package_cost": {
+                    "three_day": 150,
+                    "five_day": 200,
+                    "seven_day": 300
+                },
+                "package_details": {
+                    "relatedPlace_images": [
+                        "assets/img/h-1.webp",
+                        "assets/img/h-2.webp",
+                        "assets/img/h-3.webp",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png"
                     ],
-                    "skuData": ""
+                    "related_hotels": [
+                        {
+                            "hotel_name": "Pousada Capitão Thomaz",
+                            "hotel_thumb": "assets/img/place-1.png"
+                        },
+                        {
+                            "hotel_name": "Hotel Jeri",
+                            "hotel_thumb": "assets/img/place-2.png"
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "pkg-6",
+                "travel_type": "National",
+                "place_name": "Jericoacara",
+                "departure_place": "Belem",
+                "package_thumb": "https://i.ibb.co/jLF3rPz/place-2.png",
+                "package_include": {
+                    "flight": "Voo (ida e volta)",
+                    "accomodation": "Hospedagem",
+                    "breakfast": "Café da manhã"
+                },
+                "package_cost": {
+                    "three_day": 150,
+                    "five_day": 200,
+                    "seven_day": 300
+                },
+                "package_details": {
+                    "relatedPlace_images": [
+                        "assets/img/h-1.webp",
+                        "assets/img/h-2.webp",
+                        "assets/img/h-3.webp",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png"
+                    ],
+                    "related_hotels": [
+                        {
+                            "hotel_name": "Pousada Capitão Thomaz",
+                            "hotel_thumb": "assets/img/place-1.png"
+                        },
+                        {
+                            "hotel_name": "Hotel Jeri",
+                            "hotel_thumb": "assets/img/place-2.png"
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "pkg-7",
+                "travel_type": "National",
+                "place_name": "Jericoacara",
+                "departure_place": "Belem",
+                "package_thumb": "https://i.ibb.co/jLF3rPz/place-2.png",
+                "package_include": {
+                    "flight": "Voo (ida e volta)",
+                    "accomodation": "Hospedagem",
+                    "breakfast": "Café da manhã"
+                },
+                "package_cost": {
+                    "three_day": 150,
+                    "five_day": 200,
+                    "seven_day": 300
+                },
+                "package_details": {
+                    "relatedPlace_images": [
+                        "assets/img/h-1.webp",
+                        "assets/img/h-2.webp",
+                        "assets/img/h-3.webp",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png"
+                    ],
+                    "related_hotels": [
+                        {
+                            "hotel_name": "Pousada Capitão Thomaz",
+                            "hotel_thumb": "assets/img/place-1.png"
+                        },
+                        {
+                            "hotel_name": "Hotel Jeri",
+                            "hotel_thumb": "assets/img/place-2.png"
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "pkg-8",
+                "travel_type": "National",
+                "place_name": "Jericoacara",
+                "departure_place": "Belem",
+                "package_thumb": "https://i.ibb.co/jLF3rPz/place-2.png",
+                "package_include": {
+                    "flight": "Voo (ida e volta)",
+                    "accomodation": "Hospedagem",
+                    "breakfast": "Café da manhã"
+                },
+                "package_cost": {
+                    "three_day": 150,
+                    "five_day": 200,
+                    "seven_day": 300
+                },
+                "package_details": {
+                    "relatedPlace_images": [
+                        "assets/img/h-1.webp",
+                        "assets/img/h-2.webp",
+                        "assets/img/h-3.webp",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png",
+                        "assets/img/place-5.png"
+                    ],
+                    "related_hotels": [
+                        {
+                            "hotel_name": "Pousada Capitão Thomaz",
+                            "hotel_thumb": "assets/img/place-1.png"
+                        },
+                        {
+                            "hotel_name": "Hotel Jeri",
+                            "hotel_thumb": "assets/img/place-2.png"
+                        }
+                    ]
                 }
             }
         ]

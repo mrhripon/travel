@@ -690,6 +690,10 @@ ol {
   margin-bottom: 12px;
 }
 
+.badge.bg-indigo {
+  background-color: #0D8CB4;
+}
+
 .btn.box-btn.bg-light-blue {
   background-color: #E0EBFA;
   color: #3483FA;
